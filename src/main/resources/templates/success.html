@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"></meta>
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>sudsfsdfa</h1>
+	<div th:text="${hello}">caonima</div>
+	<div th:utext="${hello}"></div>
+	
+	<hr/>
+	<h4>
+		<span th:each="user:${users}"> [(${user})] </span>
+	</h4>
+	<h4 th:each="user2:${users} ">
+		<span> [(${user2})] </span>
+	</h4>
+</body>
+</html>

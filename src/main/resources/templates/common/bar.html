@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Dashboard</title>
+   <body>
+   <!-- topbar -->
+
+		  <nav th:fragment="topbar" class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+            <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">Company name</a>
+		  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+		  <ul class="navbar-nav px-3">
+		    <li class="nav-item text-nowrap">
+              <form th:action="@{/logout}" method="post">
+		      <a class="nav-link" type="sumbit">Sign out</a>
+              </form>
+		    </li>
+		  </ul>
+		</nav>
+
+	   <!-- sidebar -->
+
+	<nav th:fragment="sidebar"
+         id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div>
+        <div class="sidebar-sticky pt-3" >
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" th:class ="${activeUri=='main'?'nav-link active':'nav-link'}" th:href="@{/index}">
+
+                <span data-feather="home"></span>
+                个人中心 <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file"></span>
+                Orders
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="shopping-cart"></span>
+                Products
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:class ="${activeUri=='stus'?'nav-link active':'nav-link'}" th:href="@{/tcr/students/1}">
+                <span data-feather="users"></span>
+                  学生管理
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:class ="${activeUri=='exe'?'nav-link active':'nav-link'}" th:href="@{/tcr/exe}">
+                <span data-feather="file"></span>
+                发布/查询（练车）
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:class ="${activeUri=='rexe'?'nav-link active':'nav-link'}" th:href="@{/stud/exe}">
+                <span data-feather="file"></span>
+                预约练车
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:class ="${activeUri=='exam'?'nav-link active':'nav-link'}" th:href="@{/tcr/exam}">
+                <span data-feather="file-text"></span>
+                发布/查询（考试）
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:class ="${activeUri=='reaxm'?'nav-link active':'nav-link'}" th:href="@{/stud/exam}">
+                <span data-feather="file-text"></span>
+                预约考试
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:class ="${activeUri=='admin'?'nav-link active':'nav-link'}" th:href="@{/tcr/admin_list}">
+                <span data-feather="users"></span>
+                统计功能
+              </a>
+            </li>
+          </ul>
+
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Saved reports</span>
+            <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+              <span data-feather="plus-circle"></span>
+            </a>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Current month
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Last quarter
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Social engagement
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Year-end sale
+              </a>
+            </li>
+           </ul>
+        <!--</div>-->
+        </div>
+      </div>
+    </nav>
+
+   <div th:fragment="list">
+	 <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+
+      <h2>Section title</h2>
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Sex</th>
+              <th>Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+           <tr th:each="student:${students}">
+              <td th:text="${student.id}"></td>
+           </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+</head>
+  </body>
+</html>

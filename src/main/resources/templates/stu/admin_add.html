@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Dashboard</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/dashboard/">
+
+    <!-- Bootstrap core CSS -->
+<link href="/assets/dist/css/bootstrap.css" rel="stylesheet">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link th:href="@{/tcr/dashboard.css}" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">Company name</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="#">Sign out</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+   <div th:replace="common/bar::sidebar(activeUri='admin')"></div>
+<p class="text-info" th:text="${msg}"></p>
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+      <!--<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">-->
+        <!--<h1 class="h2">Dashboard</h1>-->
+        <!--<div class="btn-toolbar mb-2 mb-md-0">-->
+          <!--<div class="btn-group mr-2">-->
+            <!--<button type="button" class="btn btn-sm btn-outline-secondary">Share</button>-->
+            <!--<button type="button" class="btn btn-sm btn-outline-secondary">Export</button>-->
+          <!--</div>-->
+          <!--<button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">-->
+            <!--<span data-feather="calendar"></span>-->
+            <!--This week-->
+          <!--</button>-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>-->
+    <div class="row-cols-12">
+    <form class="form-horizontal" method="post" th:action="@{/tcr/admin/student}">
+      <input type="hidden" name="_method" value="put" th:if="${student!=null}">
+      <input type="hidden" name="id" th:value="${student.getId()}" th:if="${student!=null}">
+      <div class="form-group">
+        <label for="inputName" class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputName" th:name="name" placeholder="Name" th:value="${student!=null}?${student.getName()}">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputPhone" class="col-sm-2 control-label">Phone</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputPhone" th:name="phone" placeholder="Phone" th:value="${student!=null}?${student.getPhone()}">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <label for="inputPhone" class="col-sm-2 control-label radio-inline">Sex</label>
+            <div class="col-sm-10" >
+              <input type="radio" th:value="男" th:name="sex" th:checked="${student!=null}?${student.getSex()=='男'}:'false' or ${student==null}">男
+              <input type="radio" th:value="女" th:name="sex" th:checked="${student!=null}?${student.getSex()=='女'}:'false' ">女
+            </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="checkbox">
+            <label>
+              EnterDate<br>
+              <input type="date" class="form-control" th:name="enterDate" th:value="${student!=null}?${student.getEnterDate()}:''">
+                     <!--th:value="${student!=null}?${#dates.format(student.getEnterDate(),'yyyy-MM-dd')}">-->
+            </label>
+          </div>
+        </div>
+      </div>
+        <div class="form-group">
+            <label for="inputPhone" class="col-sm-2 control-label">VIP</label>
+            <div class="col-sm-10">
+                <input type="radio" th:value="1" th:name="vip" th:checked="${student!=null}?${student.getVip()=='1'}:'false'">是
+                <input type="radio" th:value="0" th:name="vip" th:checked="(${student!=null}?${student.getVip()=='0'}:'false') or ${student==null}">否
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPhone" class="col-sm-2 control-label">Teacher</label>
+            <div class="col-sm-10">
+                <select id="teacher" name="tid"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPhone" class="col-sm-2 control-label">Graduated</label>
+            <div class="col-sm-10">
+                <input type="radio" th:value="true" th:name="graduated" th:checked="${student!=null}?${student.getVip()=='true'}:'false' ">是
+                <input type="radio" th:value="false" th:name="graduated" th:checked="(${student!=null}?${student.getVip()=='false'}:'false') or ${student==null}">否
+            </div>
+        </div>
+      <!--<div class="form-group">-->
+        <!--<div class="col-sm-offset-2 col-sm-10">-->
+          <button type="submit" class="btn btn-sm btn-info"><span style="color: white" th:text="${student!=null}?'修改':'添加'"></span></button>
+        <!--</div>-->
+      <!--</div>-->
+    </form>
+    </div>
+
+    </main>
+  </div>
+    <script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}">
+
+    </script>
+    <script type="text/javascript" th:inline="javascript">
+        $(function () {
+            console.log("ok");
+            var stu = /*[[${student}]]*/
+            console.log(stu)
+            if(stu!=null){
+                var tcr = /*[[${studnet!=null}?${student.tid}]:'null']*/
+                $.ajax({
+                    type: "get",
+                    url: "/teachers",
+                    success: function (teachers) {
+                        var selects = $("#teacher")
+                        for(var i = 0;i<teachers.length;i++){
+                            var str = '<option value="'+teachers[i].id+'">'+teachers[i].name+'</option>'
+                            var str2 = '<option selected value="'+teachers[i].id+'">'+teachers[i].name+'</option>'
+                            if(tcr!=null&&teachers[i].id==tcr){
+                                selects.append(str2);
+                            }else {
+                                selects.append(str);
+                            }
+                        }
+                    }
+                });
+            } else {
+                $.ajax({
+                    type: "get",
+                    url: "/teachers",
+                    success: function (teachers) {
+                        var selects = $("#teacher")
+                        for(var i = 0;i<teachers.length;i++) {
+                            var str = '<option value="' + teachers[i].id + '">' + teachers[i].name + '</option>'
+                            selects.append(str);
+                        }
+                    }
+                });
+            }
+
+        })
+    </script>
+</div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+        <script src="/tcr/dashboard.js"></script></body>
+</html>

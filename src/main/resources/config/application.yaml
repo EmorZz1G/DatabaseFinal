@@ -1,0 +1,71 @@
+spring: 
+  datasource: 
+    username: root
+    password: 123321pp
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dbf?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false&characterEncoding=UTF-8
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      filter:
+        slf4j:
+          enabled: true
+        wall:
+          enabled: true
+        stat:
+          enabled: true
+        # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+      connectionProperties: druid.stat.mergeSql\=true;druid.stat.slowSqlMillis\=5000
+        # 配置DruidStatFilter
+      web-stat-filter:
+          enabled: true
+          url-pattern: "/*"
+          exclusions: "*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*"
+        # 配置DruidStatViewServlet
+      stat-view-servlet:
+          url-pattern: "/druid/*"
+          # IP白名单(没有配置或者为空，则允许所有访问)
+          # allow: 127.0.0.1,192.168.46.120
+          # IP黑名单 (存在共同时，deny优先于allow)
+          # deny: 192.168.46.121
+          #  禁用HTML页面上的“Reset All”功能
+          reset-enable: false
+      ##### WebStatFilter配置 #######
+      #启用StatFilter
+#      filters: stat,wall
+#      initialSize: 5
+#      maxActive: 10
+#      maxWait: 3000
+#      timeBetweenEvictionRunsMillis: 60000
+#      minEvictableIdleTimeMillis: 300000
+#      validationQuery: SELECT 1
+#      testWhileIdle: true
+#      testOnBorrow: false
+#      testOnReturn: false
+#      poolPreparedStatements: false
+#      maxPoolPreparedStatementPerConnectionSize: 200
+#      web-stat-filter:
+#        enabled: true
+#        url-pattern: /*
+#
+#        session-stat-enable: true
+#      aop-patterns: com.emor.dbfinal.dao.*
+#      stat-view-servlet:
+#        enabled: true
+#        url-pattern: /druid/*
+#    spring.datasource.druid.web-stat-filter.enabled=true
+#    #添加过滤规则
+#    spring.datasource.druid.web-stat-filter.url-pattern=/*
+#    #排除一些不必要的url
+#    spring.datasource.druid.web-stat-filter.
+#    #开启session统计功能
+#    spring.datasource.druid.web-stat-filter.session-stat-enable=true
+#    #bean
+#    spring.datasource.druid.aop-patterns=com.emor.dbfinal.dao.*
+#    #启用内置的监控页面
+#    spring.datasource.druid.stat-view-servlet.enabled=true
+#    #内置监控页面的地址
+#    spring.datasource.druid.stat-view-servlet.url-pattern=/druid/*
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml

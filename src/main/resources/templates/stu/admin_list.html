@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Dashboard</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/dashboard/">
+
+    <!-- Bootstrap core CSS -->
+<link th:href="@{/webjars/bootstrap/4.5.0/css/bootstrap.min.css}" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link th:href="@{/tcr/dashboard.css}" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">Company name</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="#">Sign out</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+   <div th:replace="common/bar::sidebar(activeUri='admin')"></div>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+      <h2><a type="button" href="/student" th:href="@{/tcr/admin/student}" class="btn btn-info">添加学员</a></h2>
+      <!--<div>-->
+        <!--<form class="form-inline" th:method="get" th:action="@{/tcr/students/1}">-->
+          <!--<div class="form-group">-->
+            <!--<label for="exampleInputName2">Name</label>-->
+            <!--<input type="text" name="name" class="form-control" id="exampleInputName2" placeholder="查找的学生名字">-->
+          <!--</div>-->
+          <!--<div class="form-group">-->
+            <!--<label for="exampleInputEmail2">Phone</label>-->
+            <!--<input type="text" name="phone" class="form-control" id="exampleInputEmail2" placeholder="手机号">-->
+          <!--</div>-->
+          <!--<div class="form-group">-->
+            <!--<label for="exampleInputEmail2">Gender</label>-->
+            <!--<div class="layui-input-block">-->
+              <!--<input type="radio" checked>全都要-->
+              <!--<input type="radio" name="sex" value="男" title="男" >男-->
+              <!--<input type="radio" name="sex" value="女" title="女" >女-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="form-group">-->
+            <!--<label for="exampleInputEmail2">EnterDate</label>-->
+            <!--<input type="date" name="enterDate" class="form-control"  placeholder="加入日期">-->
+          <!--</div>-->
+          <!--<button type="submit" class="btn btn-success">Research</button>-->
+        <!--</form>-->
+        <!--<p th:if="${msg!=null}" th:text="${msg}"></p>-->
+      <!--</div>-->
+      <div>
+      </div>
+      <div >
+
+        <form id="queryForm" method="post" th:action="@{/tcr/students/query}">
+          <select id="selectQuery" name="qid"></select>
+          <input type="hidden" name="pageNum" id="page" value="1">
+          <br>
+          <br>
+          <button type="submit" class="btn btn-success" >查询</button>
+        </form>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Teacher</th>
+              <th>Sex</th>
+              <th>Phone</th>
+              <th>EnterDate</th>
+              <th>VIP</th>
+              <th>Graduated</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody th:if="${students!=null}">
+            <tr th:each="student,st:${students.getList()}">
+              <td th:text="${st.count}"></td>
+              <td th:text="${student.getName()}"></td>
+              <td th:text="${student.teacher!=null}?${student.teacher.name}:''"></td>
+              <td th:text="${student.getSex()}" th:if="${not #strings.isEmpty(student.getSex())}"></td>
+              <td th:text="${student.getPhone()}"></td>
+              <td th:text="${#dates.format(student.getEnterDate(),'yyyy-MM-dd')}"></td>
+              <td th:text="${student.vip?'是':'否'}"></td>
+              <td th:text="${student.graduated?'是':'否'}"></td>
+              <td>
+                <div class="btn-group">
+                <a class="btn btn-sm btn-primary" th:href="@{/tcr/admin/student/}+${student.getId()}">编辑</a>
+
+                    <!--<button type="submit" class="btn btn-sm btn-danger"><span style="color: white">删除</span></button>-->
+                    <button href="#" th:attr="del_uri=@{/tcr/student/}+${student.id}" class="btn btn-sm btn-danger delBtn"><span style="color: white">删除</span></button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    <form id="delForm" method="post" action="#">
+      <input type="hidden" name="_method" value="delete"/>
+    </form>
+
+
+    <div class="table-pagination" th:if="${students!=null}">
+      <ul class="pagination">
+        <li th:class="${students.getPrePage() eq 0} ? 'page-item disabled' : 'page-item'">
+          <a class="page-link" th:if="${not students.isFirstPage}" th:attr="pageNum=${students.getPageNum()}" name="query">Previous</a>
+          <a class="page-link disabled" th:if="${students.isFirstPage}" href="#" >Previous</a>
+        </li>
+
+        <li th:each="pageNo : ${#numbers.sequence(1, students.getPages()>10?10:students.getPages())}" th:class="${students.getPageNum() eq pageNo}? 'page-item active' : 'page-item'">
+          <a class="page-link" th:if="${students.getPageNum()  eq pageNo}" href="javascript:void(0);">
+            <span th:text="${pageNo}"></span>
+          </a>
+          <a class="page-link" th:if="${not (students.getPageNum()  eq pageNo)}" th:attr="pageNum=${pageNo}" name="query" >
+            <span th:text="${pageNo}"></span>
+          </a>
+        </li>
+        <li class="page-item disabled" th:if="${students.pages>10}">
+          <a class="page-link">...</a>
+        </li>
+        <li th:class="${students.pageNum ge students.pages} ? 'disabled page-item' : 'page-item'">
+          <a class="page-link" th:if="${not students.isLastPage}" th:attr="pageNum=${students.nextPage}" name="query">Next</a>
+          <a class="page-link" th:if="${students.isLastPage}" href="javascript:void(0);">Next</a>
+        </li>
+      </ul>
+    </div>
+    </main>
+
+  </div>
+</div>
+
+    <script th:src="@{/webjars/jquery/3.5.1/jquery.js}">
+
+    </script>
+    <script>
+      $(".delBtn").click(function(){
+          var btn = $(this);
+          if(confirm("确定要删除吗？")){
+              $("#delForm").attr("action",btn.attr("del_uri")).submit();
+          }else{
+
+          }
+          return false;
+      })
+      $("a[name=query]").click(function () {
+          $("#page").val($(this).attr("pageNum"))
+          $("#queryForm").submit();
+      })
+      // $("#queryForm button").click(function () {
+      //     var i = $("#selectQuery option[selected='true']")
+      //     $("#qid").val(i.val())
+      //     $("#queryForm").submit();
+      // })
+      $(function () {
+          $.ajax({
+              type: "get",
+              url: "/tcr/students/queries",
+              success: function (queries) {
+                  var i = 0;
+                for(var key in queries ){
+                    if(i==0){
+                        $("#selectQuery").append(
+                            '<option value="'+key+'" selected="true">'+queries[key].strategyInfo+'</option>');
+                        i++;
+                    }else {
+                        $("#selectQuery").append(
+                            '<option value="'+key+'" selected="false">'+queries[key].strategyInfo+'</option>');
+                    }
+                }
+              }
+          })
+      })
+    </script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+        <script th:src="@{/tcr/dashboard.js}"></script></body>
+</html>

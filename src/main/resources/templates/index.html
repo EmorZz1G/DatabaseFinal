@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Index</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/dashboard/">
+    <script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}">
+
+    </script>
+    <!-- Bootstrap core CSS -->
+<link th:href="@{/webjars/bootstrap/4.5.0/css/bootstrap.css}" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="/tcr/dashboard.css" rel="stylesheet">
+  </head>
+  <body>
+    <div th:replace="common/bar::topbar"></div>
+
+<div class="container-fluid">
+  <div class="row">
+	<div th:replace="common/bar::sidebar(activeUri='main')"></div>
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h2 class="h2" th:text="${msg}"></h2>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group mr-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+          </div>
+          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+            <span data-feather="calendar"></span>
+            This week
+          </button>
+        </div>
+      </div>
+     <!--<div th:replace="~{common/bar::list}"></div>-->
+
+      <div  th:if="${user!=null} and ${user.fid!=null}">
+        <p class="text-info">您已经填写了基本信息，可以正常使用了</p>
+      </div>
+      <div class="row-cols-12" th:if="${user!=null}and${user.fid==null}">
+        <form class="form-horizontal" method="post" th:action="@{/user/}+${user.myrole}" id="userInfoForm">
+          <input name="_method" value="put" type="hidden">
+          <div th:if="${user.myrole} =='student'">
+            <div class="form-group">
+              <label for="inputName" class="col-sm-2 control-label">Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputName" th:name="name" placeholder="Name"  required="required" >
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPhone" class="col-sm-2 control-label">Phone</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputPhone" th:name="phone" placeholder="Phone"  required="required" >
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <label for="inputPhone" class="col-sm-2 control-label radio-inline">Sex</label>
+                <div class="col-sm-10">
+                  <input type="radio" th:value="男" th:name="sex" checked>男
+                  <input type="radio" th:value="女" th:name="sex" >女
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPhone" class="col-sm-2 control-box">Teacher</label>
+              <div class="col-sm-10">
+                <select id="teacher" name="tid">
+
+                </select>
+              </div>
+            </div>
+            <button class="btn btn-sm btn-info" type="submit" >提交</button>
+          </div>
+          <div th:if="${user.myrole} =='teacher'">
+          <div class="form-group">
+            <label for="inputName" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control"  th:name="name" placeholder="Name"  required="required" >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPhone" class="col-sm-2 control-label">Phone</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control"  th:name="phone" placeholder="Phone"  required="required" >
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <label for="inputPhone" class="col-sm-2 control-label radio-inline">Sex</label>
+              <div class="col-sm-10">
+                <input type="radio" th:value="男" th:name="sex" checked>男
+                <input type="radio" th:value="女" th:name="sex" >女
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPhone" class="col-sm-2 control-box">Teacher</label>
+            <div class="col-sm-10">
+              <select name="course">
+                <option value="科目二">
+                  科目二
+                </option>
+                <option value="科目三">
+                  科目三
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="checkbox">
+                <label>
+                  EnterDate<br>
+                  <input type="date" class="form-control" th:name="enterDate" >
+                  <!--th:value="${student!=null}?${#dates.format(student.getEnterDate(),'yyyy-MM-dd')}">-->
+                </label>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-sm btn-info" type="submit" id = "submit">提交</button>
+          </div>
+        </form>
+      </div>
+      <div>
+      <p class="text-info">驾校已经录入信息？<a>直接绑定</a></p>
+      </div>
+    </main>
+  </div>
+</div>
+    <script type="text/javascript" th:inline="javascript">
+        $(function () {
+            console.log("ok");
+            $.ajax({
+                type: "get",
+                url: "/teachers",
+                success: function (teachers) {
+                    var selects = $("#teacher")
+                    for(var i = 0;i<teachers.length;i++){
+                        var str = '<option value="'+teachers[i].id+'">'+teachers[i].name+'</option>'
+                        selects.append(str);
+                    }
+                }
+            });
+        })
+        // $("#submit").click(function () {
+        //     if(confirm("确定要提交吗？如果填写错误，可能会影响正常使用")){
+        //         $("#userInfoForm").submit();
+        //         return true;
+        //     }else {
+        //         return false;
+        //     }
+        //     return false;
+        // })
+        var time = new Date()
+        var day = ('0' + time.getDate()).slice(-2)
+        var month = ('0' + (time.getMonth() + 1)).slice(-2)
+        var today = time.getFullYear() + '-' + month + '-' + day
+        $("input[type=date]").val(today)
+    </script>
+
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+        <script src="/tcr/dashboard.js"></script></body>
+</html>
