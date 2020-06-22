@@ -13,7 +13,7 @@ public class NonBindingStudentStrategy implements StudentQueryStrategy ,Initiali
     StudentService studentService;
     @Override
     public PageInfo<Student> query(Integer pageNum) {
-        return studentService.findNonGraduated(pageNum);
+        return studentService.findNonBinding(pageNum);
     }
     public String toString(){
         return getStrategyInfo();
@@ -25,6 +25,6 @@ public class NonBindingStudentStrategy implements StudentQueryStrategy ,Initiali
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        StudentStrategyFactory.register("002",this);
+        StudentStrategyFactory.register("q002",this);
     }
 }

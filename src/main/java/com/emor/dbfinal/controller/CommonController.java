@@ -1,17 +1,13 @@
     package com.emor.dbfinal.controller;
 
 
-import com.emor.dbfinal.conponent.strategy.student.StudentQueryStrategy;
-import com.emor.dbfinal.conponent.strategy.student.StudentStrategyFactory;
-import com.emor.dbfinal.dao.UserMapper;
 import com.emor.dbfinal.entity.Student;
 import com.emor.dbfinal.entity.Teacher;
 import com.emor.dbfinal.entity.User;
 import com.emor.dbfinal.service.CommonService;
-import com.emor.dbfinal.service.LoginService;
+import com.emor.dbfinal.service.UserService;
 import com.emor.dbfinal.service.StudentService;
 import com.emor.dbfinal.service.TeacherService;
-import org.apache.commons.logging.Log;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +36,7 @@ public class CommonController {
     @Autowired
     TeacherService teacherService;
     @Autowired
-    LoginService loginService;
+    UserService userService;
     User user;
     public void getUser(){
         user = (User) request.getSession().getAttribute("loginUser");
@@ -79,7 +75,7 @@ public class CommonController {
         studentService.updateStudent(student);
         getUser();
         user.setFid(student.getId());
-        loginService.updateUser(user);
+        userService.updateUser(user);
         model.addAttribute("msg","修改成功！");
         return "/index";
     }
@@ -89,7 +85,7 @@ public class CommonController {
         log.info("updateTeacher {}", teacher);
         teacherService.updateTeacher(teacher);
         user.setFid(teacher.getId());
-        loginService.updateUser(user);
+        userService.updateUser(user);
         model.addAttribute("msg","修改成功！");
         return "/index";
     }

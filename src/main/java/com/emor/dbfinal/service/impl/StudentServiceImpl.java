@@ -8,6 +8,7 @@ import com.emor.dbfinal.dao.UserMapper;
 import com.emor.dbfinal.entity.*;
 import com.emor.dbfinal.exception.ExaminationException;
 import com.emor.dbfinal.exception.ExerciseException;
+import com.emor.dbfinal.exception.UserException;
 import com.emor.dbfinal.service.StudentService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -79,15 +80,26 @@ public class StudentServiceImpl implements StudentService {
         return studentMapper.insertSelective(student);
     }
 
-    @Override
-    public PageInfo<Student> findNonGraduated(Integer pageNum) {
+
+
+    private PageInfo<Student> graduatedEquals(Boolean b, Integer pageNum) {
         StudentExample example = new StudentExample();
         StudentExample.Criteria criteria = example.createCriteria();
-        criteria.andGraduatedEqualTo(false);
+        criteria.andGraduatedEqualTo(b);
         PageHelper.startPage(pageNum,10);
         System.out.println(studentMapper);
         List<Student> students = studentMapper.selectByExample(example);
         return new PageInfo<>(students);
+    }
+
+    @Override
+    public PageInfo<Student> findGraduated(Integer pageNum) {
+        return graduatedEquals(true, pageNum);
+    }
+
+    @Override
+    public PageInfo<Student> findNonGraduated(Integer pageNum) {
+        return graduatedEquals(false, pageNum);
     }
 
     @Override
@@ -100,6 +112,16 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public List<Student> findNonBinding() {
         return studentMapper.findNonBindingStudents();
+    }
+
+    @Override
+    public PageInfo<Student> findNonTeacherStudents(Integer pageNum) {
+        StudentExample example = new StudentExample();
+        StudentExample.Criteria criteria = example.createCriteria();
+        criteria.andTidIsNull();
+        PageHelper.startPage(pageNum,10);
+        List<Student> students = studentMapper.selectByExample(example);
+        return new PageInfo<>(students);
     }
 
     @Override
@@ -132,10 +154,14 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public List<Exercise> findExercisesByDate(User user, String date) {
+    public List<Exercise> findExercisesByDate(User user, String date) throws UserException {
         findStudentAndTeacherByUser(user);
         initExe();
-        criteriaForExe.andTidEqualTo(teacher.getId());
+        if(teacher!=null){
+            criteriaForExe.andTidEqualTo(teacher.getId());
+        }else {
+            throw new UserException("请联系管理员选择您的教练，之后方可使用");
+        }
         criteriaForExe.andExerciseDateLike("%"+date+"%");
         return exerciseMapper.selectByExample(exerciseExample);
     }

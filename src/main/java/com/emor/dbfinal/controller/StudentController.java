@@ -7,8 +7,10 @@ import com.emor.dbfinal.entity.Student;
 import com.emor.dbfinal.entity.User;
 import com.emor.dbfinal.exception.ExaminationException;
 import com.emor.dbfinal.exception.ExerciseException;
+import com.emor.dbfinal.exception.UserException;
 import com.emor.dbfinal.service.ExaminationService;
 import com.emor.dbfinal.service.StudentService;
+import com.emor.dbfinal.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +30,8 @@ public class StudentController {
     StudentService studentService;
     @Autowired
     HttpServletRequest request;
-
+    @Autowired
+    UserService userService;
     @Autowired
     ExaminationService examinationService;
     User user = null;
@@ -79,7 +82,13 @@ public class StudentController {
     @GetMapping(STUDENT_PREFIX+"/reserve")
     public String findExe(@RequestParam("date") String date, Model model){
         getUser();
-        List<Exercise> exercisesByDate = studentService.findExercisesByDate(user, date);
+        List<Exercise> exercisesByDate = null;
+        try {
+            exercisesByDate = studentService.findExercisesByDate(user, date);
+        } catch (UserException e) {
+            model.addAttribute("msg",e.getMessage());
+            return "index";
+        }
         logger.trace("exe list{}",exercisesByDate);
         model.addAttribute("exe",exercisesByDate);
         model.addAttribute("msg","查询成功");
@@ -87,7 +96,16 @@ public class StudentController {
     }
     @ResponseBody
     @GetMapping("/index/noBindings")
-    public List<Student> getNoBinddings(){
+    public List<Student> getNoBindings(){
         return studentService.findNonBinding();
+    }
+
+    @PutMapping("/index/binding/{id}")
+    public String bingUserWithStudent(@PathVariable("id") Integer id,Model model){
+        getUser();
+        user.setFid(id);
+        userService.updateUser(user);
+        model.addAttribute("msg","绑定成功");
+        return "index";
     }
 }

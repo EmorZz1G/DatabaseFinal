@@ -65,30 +65,31 @@
           <!--</button>-->
         <!--</div>-->
       <!--</div>-->
+        <br>
         <select id="querySelects" name="id">
 
         </select>
       <button class="btn btn-success" type="button" id="query">查询</button>
     <div class="row-cols-12">
-    <form class="form-horizontal" method="post" th:action="@{/stud/student}">
+    <form class="form-horizontal" method="post" id="queryForm">
       <input type="hidden" name="_method" value="put">
-      <input type="hidden" name="id" th:value="${student.getId()}" th:if="${student!=null}">
+      <input type="hidden" name="id">
       <div class="form-group">
         <label for="inputName" class="col-sm-2 control-label">Name</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="inputName" readonly placeholder="Name" th:value="${student!=null}?${student.getName()}">
+          <input type="text" class="form-control" id="inputName" name="name" readonly placeholder="Name" th:value="${student!=null}?${student.getName()}">
         </div>
       </div>
-      <div class="form-group">
+          <div class="form-group">
         <label for="inputPhone" class="col-sm-2 control-label">Phone</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="inputPhone" readonly placeholder="Phone" th:value="${student!=null}?${student.getPhone()}">
+          <input type="text" class="form-control" name="phone" id="inputPhone" readonly placeholder="Phone" th:value="${student!=null}?${student.getPhone()}">
         </div>
       </div>
       <div class="form-group">
             <label for="inputPhone" class="col-sm-2 control-label radio-inline">Sex</label>
             <div class="col-sm-10">
-              <input  class="form-control" type="text" readonly th:text="${student!=null}?${student.getSex()}" placeholder="性别">
+              <input  class="form-control" name="sex" type="text" readonly th:text="${student!=null}?${student.getSex()}" placeholder="性别">
             </div>
       </div>
       <div class="form-group">
@@ -126,13 +127,24 @@
                     noBindings = data;
                     console.log(data)
                     for (var i = 0; i < noBindings.length; i++) {
-                        $("#querySelects").append('<option value="'+noBindings[i].id+'">'+noBindings[i].name+'</option>')
+                        $("#querySelects").append('<option value="'+i+'">'+noBindings[i].name+'</option>')
                     }
                 }
             })
         })
         $("#query").click(function () {
-            console.log($("#selectQuery option[selected=selected]").val())
+            console.log( $("#querySelects").val())
+            $("#queryForm").find("[name]").each(function () {
+                var type = $(this)[0].nodeName.toLowerCase();
+                var name = $(this).attr("name");
+                if(name=='_method'){
+                    return;
+                }
+                console.log(type+"  "+name);
+                var newValue = noBindings[$("#querySelects").val()][name];
+                $(type+"[name="+name+"]").val(newValue)
+            })
+            $("#queryForm").attr("action","/index/binding/"+$("#queryForm input[name=id]").val());
         })
     </script>
 </div>

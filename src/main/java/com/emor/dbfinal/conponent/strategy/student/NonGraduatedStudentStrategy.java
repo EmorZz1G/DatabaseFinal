@@ -29,11 +29,11 @@ public class NonGraduatedStudentStrategy implements StudentQueryStrategy ,Initia
     }
     @Override
     public String getStrategyInfo() {
-        return "查询所有没有毕业的学生";
+        return "查询所有没有毕业的学员";
     }
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        StudentStrategyFactory.register("001",this);
+        StudentStrategyFactory.register("q001",this);
     }
 }

@@ -3,11 +3,10 @@ package com.emor.dbfinal.service.impl;
 import com.emor.dbfinal.dao.UserMapper;
 import com.emor.dbfinal.entity.User;
 import com.emor.dbfinal.entity.UserExample;
-import com.emor.dbfinal.service.LoginService;
+import com.emor.dbfinal.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 import java.util.Map;
@@ -15,7 +14,7 @@ import java.util.Map;
 
 @Service
 @Transactional
-public class LoginServiceImpl implements LoginService {
+public class UserServiceImpl implements UserService {
     @Autowired
     UserMapper userMapper;
 

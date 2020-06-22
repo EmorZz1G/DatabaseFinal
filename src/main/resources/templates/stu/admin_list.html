@@ -83,7 +83,7 @@
       <div >
 
         <form id="queryForm" method="post" th:action="@{/tcr/students/query}">
-          <select id="selectQuery" name="qid"></select>
+          <select id="selectQuery" name="qid" ></select>
           <input type="hidden" name="pageNum" id="page" value="1">
           <br>
           <br>
@@ -164,7 +164,9 @@
     <script th:src="@{/webjars/jquery/3.5.1/jquery.js}">
 
     </script>
-    <script>
+    <script th:inline="javascript">
+      var qid = /*[[${qid}]]*/
+      console.log(qid);
       $(".delBtn").click(function(){
           var btn = $(this);
           if(confirm("确定要删除吗？")){
@@ -176,6 +178,9 @@
       })
       $("a[name=query]").click(function () {
           $("#page").val($(this).attr("pageNum"))
+          console.log(qid)
+          $("#selectQuery").val(qid)
+          // console.log($("#queryForm"))
           $("#queryForm").submit();
       })
       // $("#queryForm button").click(function () {
@@ -188,17 +193,11 @@
               type: "get",
               url: "/tcr/students/queries",
               success: function (queries) {
-                  var i = 0;
                 for(var key in queries ){
-                    if(i==0){
-                        $("#selectQuery").append(
-                            '<option value="'+key+'" selected="true">'+queries[key].strategyInfo+'</option>');
-                        i++;
-                    }else {
-                        $("#selectQuery").append(
-                            '<option value="'+key+'" selected="false">'+queries[key].strategyInfo+'</option>');
-                    }
+                    $("#selectQuery").append(
+                        '<option value="'+key+'">'+queries[key].strategyInfo+'</option>');
                 }
+                 $("#selectQuery").val(qid)
               }
           })
       })

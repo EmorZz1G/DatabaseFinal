@@ -13,18 +13,18 @@ public class GraduatedStudentStrategy implements StudentQueryStrategy ,Initializ
     StudentService studentService;
     @Override
     public PageInfo<Student> query(Integer pageNum) {
-        return studentService.findNonGraduated(pageNum);
+        return studentService.findGraduated(pageNum);
     }
     public String toString(){
         return getStrategyInfo();
     }
     @Override
     public String getStrategyInfo() {
-        return "查询所有毕业了的学生";
+        return "查询所有毕业了的学员";
     }
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        StudentStrategyFactory.register("003",this);
+        StudentStrategyFactory.register("q003",this);
     }
 }
