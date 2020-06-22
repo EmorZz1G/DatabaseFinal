@@ -26,6 +26,6 @@ public class AllStudentStrategy implements StudentQueryStrategy ,InitializingBea
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        StudentStrategyFactory.register("005",this);
+        StudentStrategyFactory.register("q005",this);
     }
 }
