@@ -1,6 +1,8 @@
     package com.emor.dbfinal.controller;
 
 
+import com.emor.dbfinal.conponent.strategy.student.StudentQueryStrategy;
+import com.emor.dbfinal.conponent.strategy.student.StudentStrategyFactory;
 import com.emor.dbfinal.dao.UserMapper;
 import com.emor.dbfinal.entity.Student;
 import com.emor.dbfinal.entity.Teacher;
@@ -81,20 +83,24 @@ public class CommonController {
         model.addAttribute("msg","修改成功！");
         return "/index";
     }
-        @PutMapping("/user/teacher")
-        @Transactional
-        public String updateUserAndTcr(Teacher teacher ,Model model){
-            log.info("updateTeacher {}", teacher);
-            teacherService.updateTeacher(teacher);
-            user.setFid(teacher.getId());
-            loginService.updateUser(user);
-            model.addAttribute("msg","修改成功！");
-            return "/index";
-        }
-        @ResponseBody
-        @GetMapping("/tcr/{tid}/student")
-        public List<Student> getTeachersStudent(@PathVariable("tid") Integer tid){
-            return teacherService.findStudentsByTeacherId(tid);
-        }
+    @PutMapping("/user/teacher")
+    @Transactional
+    public String updateUserAndTcr(Teacher teacher ,Model model){
+        log.info("updateTeacher {}", teacher);
+        teacherService.updateTeacher(teacher);
+        user.setFid(teacher.getId());
+        loginService.updateUser(user);
+        model.addAttribute("msg","修改成功！");
+        return "/index";
+    }
+    @ResponseBody
+    @GetMapping("/tcr/{tid}/student")
+    public List<Student> getTeachersStudent(@PathVariable("tid") Integer tid){
+        return teacherService.findStudentsByTeacherId(tid);
+    }
+    @GetMapping("/index/bind")
+    public String toBingPage(){
+        return "stu/binding";
+    }
 
 }

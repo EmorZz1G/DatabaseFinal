@@ -49,8 +49,8 @@
 
 <div class="container-fluid">
   <div class="row">
-   <div th:replace="common/bar::sidebar(activeUri='admin')"></div>
-<p class="text-info" th:text="${msg}"></p>
+   <div th:replace="common/bar::sidebar(activeUri='main')"></div>
+
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
       <!--<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">-->
         <!--<h1 class="h2">Dashboard</h1>-->
@@ -65,70 +65,49 @@
           <!--</button>-->
         <!--</div>-->
       <!--</div>-->
+        <select id="querySelects" name="id">
 
-      <!--<canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>-->
+        </select>
+      <button class="btn btn-success" type="button" id="query">查询</button>
     <div class="row-cols-12">
-    <form class="form-horizontal" method="post" th:action="@{/tcr/admin/student}">
-      <input type="hidden" name="_method" value="put" th:if="${student!=null}">
+    <form class="form-horizontal" method="post" th:action="@{/stud/student}">
+      <input type="hidden" name="_method" value="put">
       <input type="hidden" name="id" th:value="${student.getId()}" th:if="${student!=null}">
       <div class="form-group">
         <label for="inputName" class="col-sm-2 control-label">Name</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="inputName" th:name="name" placeholder="Name" th:value="${student!=null}?${student.getName()}">
+          <input type="text" class="form-control" id="inputName" readonly placeholder="Name" th:value="${student!=null}?${student.getName()}">
         </div>
       </div>
-
       <div class="form-group">
         <label for="inputPhone" class="col-sm-2 control-label">Phone</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="inputPhone" th:name="phone" placeholder="Phone" th:value="${student!=null}?${student.getPhone()}">
+          <input type="text" class="form-control" id="inputPhone" readonly placeholder="Phone" th:value="${student!=null}?${student.getPhone()}">
         </div>
       </div>
       <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
             <label for="inputPhone" class="col-sm-2 control-label radio-inline">Sex</label>
-            <div class="col-sm-10" >
-              <input type="radio" th:value="男" th:name="sex" th:checked="${student!=null}?${student.getSex()=='男'}:'false' or ${student==null}">男
-              <input type="radio" th:value="女" th:name="sex" th:checked="${student!=null}?${student.getSex()=='女'}:'false' ">女
+            <div class="col-sm-10">
+              <input  class="form-control" type="text" readonly th:text="${student!=null}?${student.getSex()}" placeholder="性别">
             </div>
-        </div>
       </div>
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
           <div class="checkbox">
             <label>
               EnterDate<br>
-              <input type="date" class="form-control" th:name="enterDate" th:value="${student!=null}?${student.getEnterDate()}:''">
+              <input type="date" readonly class="form-control" th:name="enterDate" th:value="${student!=null}?${student.getEnterDate()}:''">
                      <!--th:value="${student!=null}?${#dates.format(student.getEnterDate(),'yyyy-MM-dd')}">-->
             </label>
           </div>
         </div>
       </div>
-        <div class="form-group">
-            <label for="inputPhone" class="col-sm-2 control-label">VIP</label>
-            <div class="col-sm-10">
-                <input type="radio" th:value="1" th:name="vip" th:checked="${student!=null}?${student.getVip()=='1'}:'false'">是
-                <input type="radio" th:value="0" th:name="vip" th:checked="(${student!=null}?${student.getVip()=='0'}:'false') or ${student==null}">否
-            </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+
+          <button type="submit" class="btn btn-sm btn-info"><span style="color: white" th:text="绑定"></span></button>
         </div>
-        <div class="form-group">
-            <label for="inputPhone" class="col-sm-2 control-label">Teacher</label>
-            <div class="col-sm-10">
-                <select id="teacher" name="tid"></select>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="inputPhone" class="col-sm-2 control-label">Graduated</label>
-            <div class="col-sm-10">
-                <input type="radio" th:value="true" th:name="graduated" th:checked="${student!=null}?${student.getGraduated()}">是
-                <input type="radio" th:value="false" th:name="graduated" th:checked="(${student!=null}?${!student.getGraduated()}) or ${student==null}">否
-            </div>
-        </div>
-      <!--<div class="form-group">-->
-        <!--<div class="col-sm-offset-2 col-sm-10">-->
-          <button type="submit" class="btn btn-sm btn-info"><span style="color: white" th:text="${student!=null}?'修改':'添加'"></span></button>
-        <!--</div>-->
-      <!--</div>-->
+      </div>
     </form>
     </div>
 
@@ -138,42 +117,22 @@
 
     </script>
     <script type="text/javascript" th:inline="javascript">
-        $(function () {
-            console.log("ok");
-            var stu = /*[[${student}]]*/
-            console.log(stu)
-            if(stu!=null){
-                var tcr = /*[[${studnet!=null}?${student.tid}]:'null']*/
-                $.ajax({
-                    type: "get",
-                    url: "/teachers",
-                    success: function (teachers) {
-                        var selects = $("#teacher")
-                        for(var i = 0;i<teachers.length;i++){
-                            var str = '<option value="'+teachers[i].id+'">'+teachers[i].name+'</option>'
-                            var str2 = '<option selected value="'+teachers[i].id+'">'+teachers[i].name+'</option>'
-                            if(tcr!=null&&teachers[i].id==tcr){
-                                selects.append(str2);
-                            }else {
-                                selects.append(str);
-                            }
-                        }
-                    }
-                });
-            } else {
-                $.ajax({
-                    type: "get",
-                    url: "/teachers",
-                    success: function (teachers) {
-                        var selects = $("#teacher")
-                        for(var i = 0;i<teachers.length;i++) {
-                            var str = '<option value="' + teachers[i].id + '">' + teachers[i].name + '</option>'
-                            selects.append(str);
-                        }
-                    }
-                });
-            }
 
+        var noBindings  = null;
+        $(function () {
+            $.ajax({
+                url: "/index/noBindings",
+                success: function (data) {
+                    noBindings = data;
+                    console.log(data)
+                    for (var i = 0; i < noBindings.length; i++) {
+                        $("#querySelects").append('<option value="'+noBindings[i].id+'">'+noBindings[i].name+'</option>')
+                    }
+                }
+            })
+        })
+        $("#query").click(function () {
+            console.log($("#selectQuery option[selected=selected]").val())
         })
     </script>
 </div>

@@ -56,7 +56,7 @@
         </div>
       </div>
      <!--<div th:replace="~{common/bar::list}"></div>-->
-??
+
       <div  th:if="${user!=null} and ${user.fid!=null}">
         <p class="text-info">您已经填写了基本信息，可以正常使用了</p>
       </div>
@@ -141,12 +141,17 @@
               </div>
             </div>
           </div>
-          <button class="btn btn-sm btn-info" type="submit" id = "submit">提交</button>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+              <button class="btn btn-sm btn-info" type="submit" id = "submit">提交</button>
+              </div>
+            </div>
           </div>
         </form>
       </div>
-      <div>
-      <p class="text-info">驾校已经录入信息？<a>直接绑定</a></p>
+      <br>
+      <div th:if="${user!=null}and${user.fid==null}">
+      <p class="text-info">驾校已经录入信息？<a th:href="@{/index/bind}">直接绑定</a></p>
       </div>
     </main>
   </div>

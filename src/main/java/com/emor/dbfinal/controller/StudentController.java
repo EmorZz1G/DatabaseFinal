@@ -3,6 +3,7 @@ package com.emor.dbfinal.controller;
 
 import com.emor.dbfinal.entity.Examination;
 import com.emor.dbfinal.entity.Exercise;
+import com.emor.dbfinal.entity.Student;
 import com.emor.dbfinal.entity.User;
 import com.emor.dbfinal.exception.ExaminationException;
 import com.emor.dbfinal.exception.ExerciseException;
@@ -13,10 +14,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -87,5 +85,9 @@ public class StudentController {
         model.addAttribute("msg","查询成功");
         return "stu/rexe";
     }
-
+    @ResponseBody
+    @GetMapping("/index/noBindings")
+    public List<Student> getNoBinddings(){
+        return studentService.findNonBinding();
+    }
 }

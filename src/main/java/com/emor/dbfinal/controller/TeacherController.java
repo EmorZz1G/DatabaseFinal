@@ -128,7 +128,6 @@ public class TeacherController {
     @PostMapping(TEACHER_PREFIX+"/students/query")
     public String superQuery(@RequestParam("qid") String qid,@RequestParam("pageNum") Integer pageNum,Model model){
         logger.info("qid {}, pageNum {}",qid,pageNum);
-
         StudentQueryStrategy strategy = StudentStrategyFactory.getStrategy(qid);
         System.out.println(strategy);
         System.out.println(strategy.getStrategyInfo());

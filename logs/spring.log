@@ -15607,3 +15607,921 @@ org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property o
 2020-06-21 19:59:18.028 DEBUG 45196 --- [http-nio-80-exec-2] c.e.d.dao.TeacherMapper.selectByExample  : ==>  Preparing: select id, name, sex, course, phone from teacher
 2020-06-21 19:59:18.029 DEBUG 45196 --- [http-nio-80-exec-2] c.e.d.dao.TeacherMapper.selectByExample  : ==> Parameters: 
 2020-06-21 19:59:18.030 DEBUG 45196 --- [http-nio-80-exec-2] c.e.d.dao.TeacherMapper.selectByExample  : <==      Total: 5
+2020-06-22 08:43:21.314  INFO 50300 --- [restartedMain] com.emor.dbfinal.DbfinalApplication      : Starting DbfinalApplication on DESKTOP-CM8622B with PID 50300 (C:\Users\Emor\eclipse-workspace\dbfinal\target\classes started by Emor in C:\Users\Emor\eclipse-workspace\dbfinal)
+2020-06-22 08:43:21.315  INFO 50300 --- [restartedMain] com.emor.dbfinal.DbfinalApplication      : No active profile set, falling back to default profiles: default
+2020-06-22 08:43:21.584  INFO 50300 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6d866dce: startup date [Mon Jun 22 08:43:21 CST 2020]; root of context hierarchy
+2020-06-22 08:43:23.425  INFO 50300 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-22 08:43:23.918  INFO 50300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$782ac5a4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-22 08:43:23.959  INFO 50300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$c13cfbc2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-22 08:43:23.988  INFO 50300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'springDaoMethodAspect' of type [com.emor.dbfinal.config.SpringDaoMethodAspect$$EnhancerBySpringCGLIB$$253ed647] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-22 08:43:24.003  INFO 50300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatInterceptor' of type [com.alibaba.druid.support.spring.stat.DruidStatInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-22 08:43:24.011  INFO 50300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatPointcut' of type [org.springframework.aop.support.JdkRegexpMethodPointcut] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-22 08:43:24.016  INFO 50300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-22 08:43:24.582  INFO 50300 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2020-06-22 08:43:24.593  INFO 50300 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-22 08:43:24.594  INFO 50300 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2020-06-22 08:43:24.711  INFO 50300 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-22 08:43:24.711  INFO 50300 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3127 ms
+2020-06-22 08:43:24.990  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-06-22 08:43:24.992  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2020-06-22 08:43:24.995  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-06-22 08:43:24.995  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-06-22 08:43:24.995  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-06-22 08:43:24.996  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-06-22 08:43:24.996  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2020-06-22 08:43:25.111  INFO 50300 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-22 08:43:26.098  INFO 50300 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-22 08:43:27.765  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6d866dce: startup date [Mon Jun 22 08:43:21 CST 2020]; root of context hierarchy
+2020-06-22 08:43:27.869  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.emor.dbfinal.controller.CommonController.getUserInfo()
+2020-06-22 08:43:27.913  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.CommonController.toIndex(org.springframework.ui.Model)
+2020-06-22 08:43:27.918  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/{tid}/student],methods=[GET]}" onto public java.util.List<com.emor.dbfinal.entity.Student> com.emor.dbfinal.controller.CommonController.getTeachersStudent(java.lang.Integer)
+2020-06-22 08:43:27.927  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/student],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.CommonController.updateUserAndStu(com.emor.dbfinal.entity.Student,org.springframework.ui.Model)
+2020-06-22 08:43:27.928  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/teachers],methods=[GET]}" onto public java.util.List<com.emor.dbfinal.entity.Teacher> com.emor.dbfinal.controller.CommonController.getTeachers()
+2020-06-22 08:43:27.932  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/teacher],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.CommonController.updateUserAndTcr(com.emor.dbfinal.entity.Teacher,org.springframework.ui.Model)
+2020-06-22 08:43:27.944  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exam],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.ExaminationController.deployExam(org.springframework.ui.Model,java.lang.String,java.lang.Integer,java.lang.String)
+2020-06-22 08:43:27.947  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exam/{id}],methods=[DELETE]}" onto public java.lang.String com.emor.dbfinal.controller.ExaminationController.deleteExam(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 08:43:27.949  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exam],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.ExaminationController.toExamPage()
+2020-06-22 08:43:27.949  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exam/query],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.ExaminationController.checkExam(java.lang.String,org.springframework.ui.Model)
+2020-06-22 08:43:27.950  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exam/{id}],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.ExaminationController.toExamEdit(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 08:43:27.952  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exam],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.ExaminationController.examEdit(org.springframework.ui.Model,java.util.Map<java.lang.String, java.lang.String>)
+2020-06-22 08:43:27.958  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/students/{pageNum}],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.findStudentByInfo(com.emor.dbfinal.entity.Student,java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 08:43:27.959  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exeStudent/{id}],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.emor.dbfinal.controller.ExerciseController.exeStudent(java.lang.Integer)
+2020-06-22 08:43:27.961  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exeDeploy],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.exeDeploy(org.springframework.ui.Model)
+2020-06-22 08:43:27.962  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exe],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.toExe()
+2020-06-22 08:43:27.963  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exeEdit/{id}],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.exeEdit(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 08:43:27.966  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exeEdit],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.updateExe(org.springframework.ui.Model)
+2020-06-22 08:43:27.978  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exe/{id}],methods=[DELETE]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.deleteExe(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 08:43:27.978  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exeSelect],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.exeSelect(java.lang.String,org.springframework.ui.Model)
+2020-06-22 08:43:27.979  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.emor.dbfinal.controller.HelloController.hello()
+2020-06-22 08:43:27.987  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.LoginController.login()
+2020-06-22 08:43:27.990  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.LoginController.doLogin(com.emor.dbfinal.entity.User,org.springframework.ui.Model)
+2020-06-22 08:43:27.993  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/setting],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.RegisterController.settingStudentInfo(com.emor.dbfinal.entity.Student,java.lang.Integer)
+2020-06-22 08:43:27.994  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/doRegister],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.RegisterController.doRegister(com.emor.dbfinal.entity.User,org.springframework.ui.Model)
+2020-06-22 08:43:28.015  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stud/exam],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.StudentController.toExamPage()
+2020-06-22 08:43:28.016  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stud/reserve],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.StudentController.findExe(java.lang.String,org.springframework.ui.Model)
+2020-06-22 08:43:28.017  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stud/exe],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.StudentController.toReservePage()
+2020-06-22 08:43:28.017  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stud/exam/reserve/{id}],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.StudentController.reserveExam(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 08:43:28.018  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stud/exams],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.StudentController.findExam(java.lang.String,org.springframework.ui.Model)
+2020-06-22 08:43:28.022  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stud/reserve/{id}],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.StudentController.reserveExe(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 08:43:28.032  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/admin/student],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.updateStudentForAdmin(com.emor.dbfinal.entity.Student,org.springframework.ui.Model)
+2020-06-22 08:43:28.035  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/students/queries],methods=[GET]}" onto public java.util.HashMap<java.lang.String, com.emor.dbfinal.conponent.strategy.student.StudentQueryStrategy> com.emor.dbfinal.controller.TeacherController.getQueries()
+2020-06-22 08:43:28.036  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/student],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.updateStudent(com.emor.dbfinal.entity.Student,org.springframework.ui.Model)
+2020-06-22 08:43:28.037  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/student],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.toAddPage()
+2020-06-22 08:43:28.041  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/student/{id}],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.toEditPage(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 08:43:28.043  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/students/query],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.superQuery(java.lang.String,java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 08:43:28.048  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/student/{id}],methods=[DELETE]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.deleteStudent(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 08:43:28.050  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/admin/student],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.toAdminEditPage()
+2020-06-22 08:43:28.051  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/admin/student/{id}],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.toAdminEditPage(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 08:43:28.051  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/admin_list],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.toAdminPage()
+2020-06-22 08:43:28.054  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/teacher],methods=[GET]}" onto public com.emor.dbfinal.entity.Teacher com.emor.dbfinal.controller.TeacherController.getTeacherInfo()
+2020-06-22 08:43:28.064  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/student],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.addStudent(com.emor.dbfinal.entity.Student)
+2020-06-22 08:43:28.068  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-06-22 08:43:28.071  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-06-22 08:43:28.121  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 08:43:28.122  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/login] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 08:43:28.122  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/login.html] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 08:43:28.123  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/register.html] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 08:43:28.123  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/register] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 08:43:28.123  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/index] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 08:43:28.123  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/index.html] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 08:43:28.141  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-22 08:43:28.142  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-22 08:43:28.302  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-22 08:43:28.441  WARN 50300 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-06-22 08:43:29.888  INFO 50300 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-22 08:43:30.144  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-06-22 08:43:30.151  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2020-06-22 08:43:30.151  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'slf4jLogFilter' has been autodetected for JMX exposure
+2020-06-22 08:43:30.151  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'wallConfig' has been autodetected for JMX exposure
+2020-06-22 08:43:30.151  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'wallFilter' has been autodetected for JMX exposure
+2020-06-22 08:43:30.151  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2020-06-22 08:43:30.159  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'slf4jLogFilter': registering with JMX server as MBean [com.alibaba.druid.filter.logging:name=slf4jLogFilter,type=Slf4jLogFilter]
+2020-06-22 08:43:30.160  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'wallConfig': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallConfig,type=WallConfig]
+2020-06-22 08:43:30.161  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'wallFilter': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallFilter,type=WallFilter]
+2020-06-22 08:43:30.163  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2020-06-22 08:43:30.164  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2020-06-22 08:43:30.270  INFO 50300 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 80 (http)
+2020-06-22 08:43:30.277  INFO 50300 --- [restartedMain] com.emor.dbfinal.DbfinalApplication      : Started DbfinalApplication in 9.94 seconds (JVM running for 17.855)
+2020-06-22 08:44:06.852  INFO 50300 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-06-22 08:44:06.853  INFO 50300 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-06-22 08:44:06.883  INFO 50300 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2020-06-22 08:44:06.909  INFO 50300 --- [http-nio-80-exec-1] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index,method GET
+2020-06-22 08:44:08.283  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/teachers,method GET
+2020-06-22 08:44:08.596 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.dao.TeacherMapper.selectByExample  : ==>  Preparing: select id, name, sex, course, phone from teacher
+2020-06-22 08:44:08.742 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.dao.TeacherMapper.selectByExample  : ==> Parameters: 
+2020-06-22 08:44:08.769 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.dao.TeacherMapper.selectByExample  : <==      Total: 5
+2020-06-22 08:44:53.921  INFO 50300 --- [http-nio-80-exec-8] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index,method GET
+2020-06-22 08:44:53.957 ERROR 50300 --- [http-nio-80-exec-8] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-80-exec-8] Exception processing template "/index": An error happened during template parsing (template: "class path resource [templates//index.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//index.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring4.view.ThymeleafView.renderFragment(ThymeleafView.java:360) [thymeleaf-spring4-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring4.view.ThymeleafView.render(ThymeleafView.java:192) [thymeleaf-spring4-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) [spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123) [druid-1.1.10.jar:1.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108) [spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) [spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) [spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_212]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_212]
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "user.fid==null" (template: "/index" - line 149, col 28)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	... 55 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "user.fid==null" (template: "/index" - line 149, col 28)
+	at org.thymeleaf.spring4.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290) ~[thymeleaf-spring4-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	... 57 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'fid' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:222) ~[spring-expression-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:94) ~[spring-expression-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:46) ~[spring-expression-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:379) ~[spring-expression-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:88) ~[spring-expression-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.expression.spel.ast.OpEQ.getValueInternal(OpEQ.java:42) ~[spring-expression-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.expression.spel.ast.OpEQ.getValueInternal(OpEQ.java:32) ~[spring-expression-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:121) ~[spring-expression-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:324) ~[spring-expression-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.thymeleaf.spring4.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263) ~[thymeleaf-spring4-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	... 78 common frames omitted
+
+2020-06-22 08:44:53.960 ERROR 50300 --- [http-nio-80-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//index.html]")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'fid' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:222) ~[spring-expression-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:94) ~[spring-expression-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:46) ~[spring-expression-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:379) ~[spring-expression-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:88) ~[spring-expression-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.expression.spel.ast.OpEQ.getValueInternal(OpEQ.java:42) ~[spring-expression-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.expression.spel.ast.OpEQ.getValueInternal(OpEQ.java:32) ~[spring-expression-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:121) ~[spring-expression-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:324) ~[spring-expression-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.thymeleaf.spring4.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263) ~[thymeleaf-spring4-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring4.view.ThymeleafView.renderFragment(ThymeleafView.java:360) ~[thymeleaf-spring4-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring4.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring4-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123) ~[druid-1.1.10.jar:1.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108) ~[spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.14.RELEASE.jar:4.3.14.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_212]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_212]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_212]
+
+2020-06-22 08:44:53.967  INFO 50300 --- [http-nio-80-exec-8] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/error,method GET
+2020-06-22 08:46:12.944  INFO 50300 --- [http-nio-80-exec-10] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index,method GET
+2020-06-22 08:46:13.723  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/teachers,method GET
+2020-06-22 08:46:13.729 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.dao.TeacherMapper.selectByExample  : ==>  Preparing: select id, name, sex, course, phone from teacher
+2020-06-22 08:46:13.730 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.dao.TeacherMapper.selectByExample  : ==> Parameters: 
+2020-06-22 08:46:13.731 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.dao.TeacherMapper.selectByExample  : <==      Total: 5
+2020-06-22 08:46:14.977  INFO 50300 --- [http-nio-80-exec-5] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index,method GET
+2020-06-22 08:46:15.898  INFO 50300 --- [http-nio-80-exec-8] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/teachers,method GET
+2020-06-22 08:46:15.899 DEBUG 50300 --- [http-nio-80-exec-8] c.e.d.dao.TeacherMapper.selectByExample  : ==>  Preparing: select id, name, sex, course, phone from teacher
+2020-06-22 08:46:15.900 DEBUG 50300 --- [http-nio-80-exec-8] c.e.d.dao.TeacherMapper.selectByExample  : ==> Parameters: 
+2020-06-22 08:46:15.903 DEBUG 50300 --- [http-nio-80-exec-8] c.e.d.dao.TeacherMapper.selectByExample  : <==      Total: 5
+2020-06-22 08:46:18.706  INFO 50300 --- [http-nio-80-exec-9] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/exe,method GET
+2020-06-22 08:46:18.707  INFO 50300 --- [http-nio-80-exec-9] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user null
+2020-06-22 08:46:18.727  INFO 50300 --- [http-nio-80-exec-10] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/login.html,method GET
+2020-06-22 08:46:22.112  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/login,method POST
+2020-06-22 08:46:22.171 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.dao.UserMapper.selectByExample     : ==>  Preparing: select username, password, fid, myrole from user WHERE ( username = ? and password = ? )
+2020-06-22 08:46:22.208 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.dao.UserMapper.selectByExample     : ==> Parameters: emor(String), 123456(String)
+2020-06-22 08:46:22.210 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-06-22 08:46:22.213 TRACE 50300 --- [http-nio-80-exec-4] c.e.dbfinal.controller.LoginController   : User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:46:22.226  INFO 50300 --- [http-nio-80-exec-3] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index,method GET
+2020-06-22 08:46:22.728  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/teachers,method GET
+2020-06-22 08:46:22.729 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.dao.TeacherMapper.selectByExample  : ==>  Preparing: select id, name, sex, course, phone from teacher
+2020-06-22 08:46:22.729 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.dao.TeacherMapper.selectByExample  : ==> Parameters: 
+2020-06-22 08:46:22.732 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.dao.TeacherMapper.selectByExample  : <==      Total: 5
+2020-06-22 08:51:23.301  INFO 50300 --- [http-nio-80-exec-10] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/admin_list,method GET
+2020-06-22 08:51:23.301  INFO 50300 --- [http-nio-80-exec-10] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:51:23.301  INFO 50300 --- [http-nio-80-exec-10] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:51:23.760  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/students/queries,method GET
+2020-06-22 08:51:23.760  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:51:23.761  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:51:26.816  INFO 50300 --- [http-nio-80-exec-3] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/students/query,method POST
+2020-06-22 08:51:26.817  INFO 50300 --- [http-nio-80-exec-3] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:51:26.818  INFO 50300 --- [http-nio-80-exec-3] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:51:26.822  INFO 50300 --- [http-nio-80-exec-3] c.e.d.controller.TeacherController       : qid 002, pageNum 1
+2020-06-22 08:51:26.868 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.S.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM student WHERE (graduated = ?)
+2020-06-22 08:51:26.871 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.S.selectByExample_COUNT          : ==> Parameters: false(Boolean)
+2020-06-22 08:51:26.873 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.S.selectByExample_COUNT          : <==      Total: 1
+2020-06-22 08:51:26.875 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.dao.StudentMapper.selectByExample  : ==>  Preparing: select id, NAME, sex, phone, enter_date, vip, tid, graduated from student WHERE ( graduated = ? ) LIMIT ?
+2020-06-22 08:51:26.877 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.dao.StudentMapper.selectByExample  : ==> Parameters: false(Boolean), 10(Integer)
+2020-06-22 08:51:26.880 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:51:26.881 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 1(Integer)
+2020-06-22 08:51:26.883 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:51:26.885 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:51:26.885 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 5(Integer)
+2020-06-22 08:51:26.886 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:51:26.887 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:51:26.887 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 3(Integer)
+2020-06-22 08:51:26.888 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:51:26.889 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:51:26.889 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 4(Integer)
+2020-06-22 08:51:26.890 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:51:26.891 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:51:26.891 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 2(Integer)
+2020-06-22 08:51:26.892 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:51:26.893 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.dao.StudentMapper.selectByExample  : <==      Total: 10
+2020-06-22 08:51:27.419  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/students/queries,method GET
+2020-06-22 08:51:27.419  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:51:27.419  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:51:35.710  INFO 50300 --- [http-nio-80-exec-9] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/admin/student/4,method GET
+2020-06-22 08:51:35.710  INFO 50300 --- [http-nio-80-exec-9] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:51:35.711  INFO 50300 --- [http-nio-80-exec-9] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:51:35.712 TRACE 50300 --- [http-nio-80-exec-9] c.e.d.controller.TeacherController       : 4 查询
+2020-06-22 08:51:35.771 DEBUG 50300 --- [http-nio-80-exec-9] c.e.d.d.S.selectByPrimaryKey             : ==>  Preparing: select id, NAME, sex, phone, enter_date, vip, tid, graduated from student where id = ?
+2020-06-22 08:51:35.772 DEBUG 50300 --- [http-nio-80-exec-9] c.e.d.d.S.selectByPrimaryKey             : ==> Parameters: 4(Integer)
+2020-06-22 08:51:35.773 DEBUG 50300 --- [http-nio-80-exec-9] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:51:35.773 DEBUG 50300 --- [http-nio-80-exec-9] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 1(Integer)
+2020-06-22 08:51:35.774 DEBUG 50300 --- [http-nio-80-exec-9] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:51:35.775 DEBUG 50300 --- [http-nio-80-exec-9] c.e.d.d.S.selectByPrimaryKey             : <==      Total: 1
+2020-06-22 08:51:35.794 TRACE 50300 --- [http-nio-80-exec-9] c.e.d.controller.TeacherController       : 查询结果studentStudent(teacher=Teacher(id=1, name=钟智杰, sex=男, course=科目二, phone=13241), id=4, name=Jack, sex=女, phone=4257, enterDate=2020-06-13, vip=1, tid=1, graduated=false)
+2020-06-22 08:51:36.243  INFO 50300 --- [http-nio-80-exec-1] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/teachers,method GET
+2020-06-22 08:51:36.253 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.dao.TeacherMapper.selectByExample  : ==>  Preparing: select id, name, sex, course, phone from teacher
+2020-06-22 08:51:36.254 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.dao.TeacherMapper.selectByExample  : ==> Parameters: 
+2020-06-22 08:51:36.256 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.dao.TeacherMapper.selectByExample  : <==      Total: 5
+2020-06-22 08:51:55.086  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/admin/student,method PUT
+2020-06-22 08:51:55.086  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:51:55.086  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:51:55.092 TRACE 50300 --- [http-nio-80-exec-4] c.e.d.controller.TeacherController       : student Student(teacher=null, id=4, name=Jack2, sex=女, phone=4257, enterDate=2020-06-13, vip=1, tid=1, graduated=false)准备修改
+2020-06-22 08:51:55.094 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.d.S.updateByPrimaryKeySelective    : ==>  Preparing: update student SET NAME = ?, sex = ?, phone = ?, enter_date = ?, vip = ?, tid = ?, graduated = ? where id = ?
+2020-06-22 08:51:55.099 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.d.S.updateByPrimaryKeySelective    : ==> Parameters: Jack2(String), 女(String), 4257(String), 2020-06-13(String), 1(String), 1(Integer), false(Boolean), 4(Integer)
+2020-06-22 08:51:55.103 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.d.S.updateByPrimaryKeySelective    : <==    Updates: 1
+2020-06-22 08:51:55.106 TRACE 50300 --- [http-nio-80-exec-4] c.e.d.controller.TeacherController       : 修改成功
+2020-06-22 08:51:55.459  INFO 50300 --- [http-nio-80-exec-7] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/students/queries,method GET
+2020-06-22 08:51:55.459  INFO 50300 --- [http-nio-80-exec-7] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:51:55.459  INFO 50300 --- [http-nio-80-exec-7] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:51:58.114  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/students/query,method POST
+2020-06-22 08:51:58.120  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:51:58.121  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:51:58.122  INFO 50300 --- [http-nio-80-exec-6] c.e.d.controller.TeacherController       : qid 005, pageNum 1
+2020-06-22 08:51:58.123 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.S.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM student
+2020-06-22 08:51:58.123 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.S.selectByExample_COUNT          : ==> Parameters: 
+2020-06-22 08:51:58.125 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.S.selectByExample_COUNT          : <==      Total: 1
+2020-06-22 08:51:58.126 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.dao.StudentMapper.selectByExample  : ==>  Preparing: select id, NAME, sex, phone, enter_date, vip, tid, graduated from student LIMIT ?
+2020-06-22 08:51:58.127 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.dao.StudentMapper.selectByExample  : ==> Parameters: 10(Integer)
+2020-06-22 08:51:58.129 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:51:58.130 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 1(Integer)
+2020-06-22 08:51:58.131 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:51:58.133 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:51:58.133 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 5(Integer)
+2020-06-22 08:51:58.135 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:51:58.138 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:51:58.138 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 3(Integer)
+2020-06-22 08:51:58.139 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:51:58.140 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:51:58.141 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 4(Integer)
+2020-06-22 08:51:58.142 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:51:58.143 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.dao.StudentMapper.selectByExample  : <==      Total: 10
+2020-06-22 08:51:58.718  INFO 50300 --- [http-nio-80-exec-10] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/students/queries,method GET
+2020-06-22 08:51:58.718  INFO 50300 --- [http-nio-80-exec-10] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:51:58.718  INFO 50300 --- [http-nio-80-exec-10] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:52:12.649  INFO 50300 --- [http-nio-80-exec-2] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/admin/student/12,method GET
+2020-06-22 08:52:12.650  INFO 50300 --- [http-nio-80-exec-2] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:52:12.650  INFO 50300 --- [http-nio-80-exec-2] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:52:12.650 TRACE 50300 --- [http-nio-80-exec-2] c.e.d.controller.TeacherController       : 12 查询
+2020-06-22 08:52:12.655 DEBUG 50300 --- [http-nio-80-exec-2] c.e.d.d.S.selectByPrimaryKey             : ==>  Preparing: select id, NAME, sex, phone, enter_date, vip, tid, graduated from student where id = ?
+2020-06-22 08:52:12.656 DEBUG 50300 --- [http-nio-80-exec-2] c.e.d.d.S.selectByPrimaryKey             : ==> Parameters: 12(Integer)
+2020-06-22 08:52:12.657 DEBUG 50300 --- [http-nio-80-exec-2] c.e.d.d.S.selectByPrimaryKey             : <==      Total: 1
+2020-06-22 08:52:12.659 TRACE 50300 --- [http-nio-80-exec-2] c.e.d.controller.TeacherController       : 查询结果studentStudent(teacher=null, id=12, name=李四, sex=男, phone=435345, enterDate=2020-06-19, vip=0, tid=null, graduated=true)
+2020-06-22 08:52:12.992  INFO 50300 --- [http-nio-80-exec-3] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/teachers,method GET
+2020-06-22 08:52:12.993 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.dao.TeacherMapper.selectByExample  : ==>  Preparing: select id, name, sex, course, phone from teacher
+2020-06-22 08:52:12.993 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.dao.TeacherMapper.selectByExample  : ==> Parameters: 
+2020-06-22 08:52:12.995 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.dao.TeacherMapper.selectByExample  : <==      Total: 5
+2020-06-22 08:53:00.743  INFO 50300 --- [http-nio-80-exec-7] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/admin/student/12,method GET
+2020-06-22 08:53:00.743  INFO 50300 --- [http-nio-80-exec-7] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:53:00.743  INFO 50300 --- [http-nio-80-exec-7] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:53:00.744 TRACE 50300 --- [http-nio-80-exec-7] c.e.d.controller.TeacherController       : 12 查询
+2020-06-22 08:53:00.788 TRACE 50300 --- [http-nio-80-exec-7] c.e.d.controller.TeacherController       : 查询结果studentStudent(teacher=null, id=12, name=李四, sex=男, phone=435345, enterDate=2020-06-19, vip=0, tid=null, graduated=true)
+2020-06-22 08:53:01.804  INFO 50300 --- [http-nio-80-exec-8] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/teachers,method GET
+2020-06-22 08:53:01.805 DEBUG 50300 --- [http-nio-80-exec-8] c.e.d.dao.TeacherMapper.selectByExample  : ==>  Preparing: select id, name, sex, course, phone from teacher
+2020-06-22 08:53:01.806 DEBUG 50300 --- [http-nio-80-exec-8] c.e.d.dao.TeacherMapper.selectByExample  : ==> Parameters: 
+2020-06-22 08:53:01.808 DEBUG 50300 --- [http-nio-80-exec-8] c.e.d.dao.TeacherMapper.selectByExample  : <==      Total: 5
+2020-06-22 08:53:04.002  INFO 50300 --- [http-nio-80-exec-10] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/admin_list,method GET
+2020-06-22 08:53:04.002  INFO 50300 --- [http-nio-80-exec-10] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:53:04.002  INFO 50300 --- [http-nio-80-exec-10] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:53:04.336  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/students/queries,method GET
+2020-06-22 08:53:04.336  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:53:04.336  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:53:06.351  INFO 50300 --- [http-nio-80-exec-3] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/students/query,method POST
+2020-06-22 08:53:06.354  INFO 50300 --- [http-nio-80-exec-3] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:53:06.355  INFO 50300 --- [http-nio-80-exec-3] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:53:06.356  INFO 50300 --- [http-nio-80-exec-3] c.e.d.controller.TeacherController       : qid 005, pageNum 1
+2020-06-22 08:53:06.357 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.S.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM student
+2020-06-22 08:53:06.357 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.S.selectByExample_COUNT          : ==> Parameters: 
+2020-06-22 08:53:06.358 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.S.selectByExample_COUNT          : <==      Total: 1
+2020-06-22 08:53:06.358 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.dao.StudentMapper.selectByExample  : ==>  Preparing: select id, NAME, sex, phone, enter_date, vip, tid, graduated from student LIMIT ?
+2020-06-22 08:53:06.359 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.dao.StudentMapper.selectByExample  : ==> Parameters: 10(Integer)
+2020-06-22 08:53:06.360 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:53:06.360 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 1(Integer)
+2020-06-22 08:53:06.361 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:53:06.361 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:53:06.362 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 5(Integer)
+2020-06-22 08:53:06.363 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:53:06.363 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:53:06.364 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 3(Integer)
+2020-06-22 08:53:06.364 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:53:06.365 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:53:06.365 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 4(Integer)
+2020-06-22 08:53:06.368 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:53:06.368 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.dao.StudentMapper.selectByExample  : <==      Total: 10
+2020-06-22 08:53:06.950  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/students/queries,method GET
+2020-06-22 08:53:06.951  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:53:06.951  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:53:08.009  INFO 50300 --- [http-nio-80-exec-8] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/admin/student/5,method GET
+2020-06-22 08:53:08.009  INFO 50300 --- [http-nio-80-exec-8] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:53:08.010  INFO 50300 --- [http-nio-80-exec-8] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:53:08.010 TRACE 50300 --- [http-nio-80-exec-8] c.e.d.controller.TeacherController       : 5 查询
+2020-06-22 08:53:08.010 DEBUG 50300 --- [http-nio-80-exec-8] c.e.d.d.S.selectByPrimaryKey             : ==>  Preparing: select id, NAME, sex, phone, enter_date, vip, tid, graduated from student where id = ?
+2020-06-22 08:53:08.011 DEBUG 50300 --- [http-nio-80-exec-8] c.e.d.d.S.selectByPrimaryKey             : ==> Parameters: 5(Integer)
+2020-06-22 08:53:08.012 DEBUG 50300 --- [http-nio-80-exec-8] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:53:08.012 DEBUG 50300 --- [http-nio-80-exec-8] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 5(Integer)
+2020-06-22 08:53:08.013 DEBUG 50300 --- [http-nio-80-exec-8] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:53:08.014 DEBUG 50300 --- [http-nio-80-exec-8] c.e.d.d.S.selectByPrimaryKey             : <==      Total: 1
+2020-06-22 08:53:08.015 TRACE 50300 --- [http-nio-80-exec-8] c.e.d.controller.TeacherController       : 查询结果studentStudent(teacher=Teacher(id=5, name=刘化, sex=男, course=科目三, phone=123123), id=5, name=钟智杰, sex=女, phone=53515111, enterDate=2020-06-14, vip=0, tid=5, graduated=false)
+2020-06-22 08:53:08.475  INFO 50300 --- [http-nio-80-exec-10] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/teachers,method GET
+2020-06-22 08:53:08.476 DEBUG 50300 --- [http-nio-80-exec-10] c.e.d.dao.TeacherMapper.selectByExample  : ==>  Preparing: select id, name, sex, course, phone from teacher
+2020-06-22 08:53:08.477 DEBUG 50300 --- [http-nio-80-exec-10] c.e.d.dao.TeacherMapper.selectByExample  : ==> Parameters: 
+2020-06-22 08:53:08.478 DEBUG 50300 --- [http-nio-80-exec-10] c.e.d.dao.TeacherMapper.selectByExample  : <==      Total: 5
+2020-06-22 08:55:00.314  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/admin/student/5,method GET
+2020-06-22 08:55:00.314  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:55:00.321  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:55:00.321 TRACE 50300 --- [http-nio-80-exec-4] c.e.d.controller.TeacherController       : 5 查询
+2020-06-22 08:55:00.326 TRACE 50300 --- [http-nio-80-exec-4] c.e.d.controller.TeacherController       : 查询结果studentStudent(teacher=Teacher(id=5, name=刘化, sex=男, course=科目三, phone=123123), id=5, name=钟智杰, sex=女, phone=53515111, enterDate=2020-06-14, vip=0, tid=5, graduated=false)
+2020-06-22 08:55:01.081  INFO 50300 --- [http-nio-80-exec-5] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/teachers,method GET
+2020-06-22 08:55:01.086 DEBUG 50300 --- [http-nio-80-exec-5] c.e.d.dao.TeacherMapper.selectByExample  : ==>  Preparing: select id, name, sex, course, phone from teacher
+2020-06-22 08:55:01.087 DEBUG 50300 --- [http-nio-80-exec-5] c.e.d.dao.TeacherMapper.selectByExample  : ==> Parameters: 
+2020-06-22 08:55:01.088 DEBUG 50300 --- [http-nio-80-exec-5] c.e.d.dao.TeacherMapper.selectByExample  : <==      Total: 5
+2020-06-22 08:56:05.683  INFO 50300 --- [http-nio-80-exec-9] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/admin/student/5,method GET
+2020-06-22 08:56:05.684  INFO 50300 --- [http-nio-80-exec-9] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:56:05.684  INFO 50300 --- [http-nio-80-exec-9] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:56:05.684 TRACE 50300 --- [http-nio-80-exec-9] c.e.d.controller.TeacherController       : 5 查询
+2020-06-22 08:56:05.685 TRACE 50300 --- [http-nio-80-exec-9] c.e.d.controller.TeacherController       : 查询结果studentStudent(teacher=Teacher(id=5, name=刘化, sex=男, course=科目三, phone=123123), id=5, name=钟智杰, sex=女, phone=53515111, enterDate=2020-06-14, vip=0, tid=5, graduated=false)
+2020-06-22 08:56:06.039  INFO 50300 --- [http-nio-80-exec-1] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/teachers,method GET
+2020-06-22 08:56:06.044 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.dao.TeacherMapper.selectByExample  : ==>  Preparing: select id, name, sex, course, phone from teacher
+2020-06-22 08:56:06.044 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.dao.TeacherMapper.selectByExample  : ==> Parameters: 
+2020-06-22 08:56:06.047 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.dao.TeacherMapper.selectByExample  : <==      Total: 5
+2020-06-22 08:56:11.154  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/admin/student,method PUT
+2020-06-22 08:56:11.155  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:56:11.155  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:56:11.156 TRACE 50300 --- [http-nio-80-exec-4] c.e.d.controller.TeacherController       : student Student(teacher=null, id=5, name=钟智杰, sex=女, phone=53515111, enterDate=2020-06-14, vip=0, tid=1, graduated=true)准备修改
+2020-06-22 08:56:11.160 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.d.S.updateByPrimaryKeySelective    : ==>  Preparing: update student SET NAME = ?, sex = ?, phone = ?, enter_date = ?, vip = ?, tid = ?, graduated = ? where id = ?
+2020-06-22 08:56:11.161 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.d.S.updateByPrimaryKeySelective    : ==> Parameters: 钟智杰(String), 女(String), 53515111(String), 2020-06-14(String), 0(String), 1(Integer), true(Boolean), 5(Integer)
+2020-06-22 08:56:11.163 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.d.S.updateByPrimaryKeySelective    : <==    Updates: 1
+2020-06-22 08:56:11.164 TRACE 50300 --- [http-nio-80-exec-4] c.e.d.controller.TeacherController       : 修改成功
+2020-06-22 08:56:11.438  INFO 50300 --- [http-nio-80-exec-7] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/students/queries,method GET
+2020-06-22 08:56:11.439  INFO 50300 --- [http-nio-80-exec-7] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:56:11.439  INFO 50300 --- [http-nio-80-exec-7] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:56:13.927  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/students/query,method POST
+2020-06-22 08:56:13.928  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:56:13.928  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:56:13.928  INFO 50300 --- [http-nio-80-exec-6] c.e.d.controller.TeacherController       : qid 005, pageNum 1
+2020-06-22 08:56:13.929 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.S.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM student
+2020-06-22 08:56:13.929 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.S.selectByExample_COUNT          : ==> Parameters: 
+2020-06-22 08:56:13.930 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.S.selectByExample_COUNT          : <==      Total: 1
+2020-06-22 08:56:13.931 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.dao.StudentMapper.selectByExample  : ==>  Preparing: select id, NAME, sex, phone, enter_date, vip, tid, graduated from student LIMIT ?
+2020-06-22 08:56:13.931 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.dao.StudentMapper.selectByExample  : ==> Parameters: 10(Integer)
+2020-06-22 08:56:13.933 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:56:13.933 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 1(Integer)
+2020-06-22 08:56:13.934 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:56:13.935 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:56:13.935 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 3(Integer)
+2020-06-22 08:56:13.937 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:56:13.938 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:56:13.938 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 4(Integer)
+2020-06-22 08:56:13.939 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:56:13.940 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.dao.StudentMapper.selectByExample  : <==      Total: 10
+2020-06-22 08:56:14.547  INFO 50300 --- [http-nio-80-exec-10] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/students/queries,method GET
+2020-06-22 08:56:14.547  INFO 50300 --- [http-nio-80-exec-10] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:56:14.547  INFO 50300 --- [http-nio-80-exec-10] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:56:53.620  INFO 50300 --- [http-nio-80-exec-2] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/students/query,method POST
+2020-06-22 08:56:53.621  INFO 50300 --- [http-nio-80-exec-2] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:56:53.621  INFO 50300 --- [http-nio-80-exec-2] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:56:53.623  INFO 50300 --- [http-nio-80-exec-2] c.e.d.controller.TeacherController       : qid 005, pageNum 2
+2020-06-22 08:56:53.626 DEBUG 50300 --- [http-nio-80-exec-2] c.e.d.d.S.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM student
+2020-06-22 08:56:53.626 DEBUG 50300 --- [http-nio-80-exec-2] c.e.d.d.S.selectByExample_COUNT          : ==> Parameters: 
+2020-06-22 08:56:53.627 DEBUG 50300 --- [http-nio-80-exec-2] c.e.d.d.S.selectByExample_COUNT          : <==      Total: 1
+2020-06-22 08:56:53.627 DEBUG 50300 --- [http-nio-80-exec-2] c.e.d.dao.StudentMapper.selectByExample  : ==>  Preparing: select id, NAME, sex, phone, enter_date, vip, tid, graduated from student LIMIT ?, ?
+2020-06-22 08:56:53.628 DEBUG 50300 --- [http-nio-80-exec-2] c.e.d.dao.StudentMapper.selectByExample  : ==> Parameters: 10(Integer), 10(Integer)
+2020-06-22 08:56:53.629 DEBUG 50300 --- [http-nio-80-exec-2] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:56:53.629 DEBUG 50300 --- [http-nio-80-exec-2] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 2(Integer)
+2020-06-22 08:56:53.631 DEBUG 50300 --- [http-nio-80-exec-2] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:56:53.631 DEBUG 50300 --- [http-nio-80-exec-2] c.e.d.dao.StudentMapper.selectByExample  : <==      Total: 1
+2020-06-22 08:56:53.997  INFO 50300 --- [http-nio-80-exec-5] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/students/queries,method GET
+2020-06-22 08:56:53.997  INFO 50300 --- [http-nio-80-exec-5] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:56:53.997  INFO 50300 --- [http-nio-80-exec-5] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:56:55.879  INFO 50300 --- [http-nio-80-exec-7] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/students/query,method POST
+2020-06-22 08:56:55.879  INFO 50300 --- [http-nio-80-exec-7] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:56:55.879  INFO 50300 --- [http-nio-80-exec-7] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:56:55.879  INFO 50300 --- [http-nio-80-exec-7] c.e.d.controller.TeacherController       : qid 005, pageNum 1
+2020-06-22 08:56:55.880 DEBUG 50300 --- [http-nio-80-exec-7] c.e.d.d.S.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM student
+2020-06-22 08:56:55.881 DEBUG 50300 --- [http-nio-80-exec-7] c.e.d.d.S.selectByExample_COUNT          : ==> Parameters: 
+2020-06-22 08:56:55.882 DEBUG 50300 --- [http-nio-80-exec-7] c.e.d.d.S.selectByExample_COUNT          : <==      Total: 1
+2020-06-22 08:56:55.882 DEBUG 50300 --- [http-nio-80-exec-7] c.e.d.dao.StudentMapper.selectByExample  : ==>  Preparing: select id, NAME, sex, phone, enter_date, vip, tid, graduated from student LIMIT ?
+2020-06-22 08:56:55.882 DEBUG 50300 --- [http-nio-80-exec-7] c.e.d.dao.StudentMapper.selectByExample  : ==> Parameters: 10(Integer)
+2020-06-22 08:56:55.883 DEBUG 50300 --- [http-nio-80-exec-7] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:56:55.884 DEBUG 50300 --- [http-nio-80-exec-7] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 1(Integer)
+2020-06-22 08:56:55.885 DEBUG 50300 --- [http-nio-80-exec-7] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:56:55.886 DEBUG 50300 --- [http-nio-80-exec-7] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:56:55.886 DEBUG 50300 --- [http-nio-80-exec-7] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 3(Integer)
+2020-06-22 08:56:55.887 DEBUG 50300 --- [http-nio-80-exec-7] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:56:55.889 DEBUG 50300 --- [http-nio-80-exec-7] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:56:55.889 DEBUG 50300 --- [http-nio-80-exec-7] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 4(Integer)
+2020-06-22 08:56:55.891 DEBUG 50300 --- [http-nio-80-exec-7] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:56:55.891 DEBUG 50300 --- [http-nio-80-exec-7] c.e.d.dao.StudentMapper.selectByExample  : <==      Total: 10
+2020-06-22 08:56:56.216  INFO 50300 --- [http-nio-80-exec-9] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/students/queries,method GET
+2020-06-22 08:56:56.216  INFO 50300 --- [http-nio-80-exec-9] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:56:56.216  INFO 50300 --- [http-nio-80-exec-9] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:57:34.606  INFO 50300 --- [http-nio-80-exec-1] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/students/1,method GET
+2020-06-22 08:57:34.607  INFO 50300 --- [http-nio-80-exec-1] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:57:34.607  INFO 50300 --- [http-nio-80-exec-1] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:57:34.610 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.d.S.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM student
+2020-06-22 08:57:34.610 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.d.S.selectByExample_COUNT          : ==> Parameters: 
+2020-06-22 08:57:34.611 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.d.S.selectByExample_COUNT          : <==      Total: 1
+2020-06-22 08:57:34.612 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.dao.StudentMapper.selectByExample  : ==>  Preparing: select id, NAME, sex, phone, enter_date, vip, tid, graduated from student LIMIT ?
+2020-06-22 08:57:34.612 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.dao.StudentMapper.selectByExample  : ==> Parameters: 10(Integer)
+2020-06-22 08:57:34.614 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:57:34.614 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 1(Integer)
+2020-06-22 08:57:34.615 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:57:34.616 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:57:34.616 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 3(Integer)
+2020-06-22 08:57:34.617 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:57:34.618 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:57:34.618 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 4(Integer)
+2020-06-22 08:57:34.619 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:57:34.620 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.dao.StudentMapper.selectByExample  : <==      Total: 10
+2020-06-22 08:57:34.620 TRACE 50300 --- [http-nio-80-exec-1] c.e.d.controller.TeacherController       : studentByExamplePageInfo{pageNum=1, pageSize=10, size=10, startRow=1, endRow=10, total=11, pages=2, list=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=11, pages=2, reasonable=false, pageSizeZero=false}[Student(teacher=Teacher(id=1, name=钟智杰, sex=男, course=科目二, phone=13241), id=1, name=Emor24, sex=男, phone=12312412, enterDate=2020-06-21, vip=1, tid=1, graduated=false), Student(teacher=Teacher(id=1, name=钟智杰, sex=男, course=科目二, phone=13241), id=4, name=Jack2, sex=女, phone=4257, enterDate=2020-06-13, vip=1, tid=1, graduated=false), Student(teacher=Teacher(id=1, name=钟智杰, sex=男, course=科目二, phone=13241), id=5, name=钟智杰, sex=女, phone=53515111, enterDate=2020-06-14, vip=0, tid=1, graduated=true), Student(teacher=null, id=10, name=Emors_Tunel, sex=男, phone=513515, enterDate=2021-06-22, vip=0, tid=null, graduated=false), Student(teacher=null, id=11, name=张三, sex=男, phone=435345, enterDate=2020-06-19, vip=0, tid=null, graduated=false), Student(teacher=null, id=12, name=李四, sex=男, phone=435345, enterDate=2020-06-19, vip=0, tid=null, graduated=true), Student(teacher=Teacher(id=3, name=陈红浩, sex=男, course=科目三, phone=3124134), id=13, name=王五, sex=男, phone=124412124, enterDate=2020-06-05, vip=0, tid=3, graduated=false), Student(teacher=Teacher(id=3, name=陈红浩, sex=男, course=科目三, phone=3124134), id=14, name=陈栋栋, sex=男, phone=11111, enterDate=2020-06-05, vip=0, tid=3, graduated=false), Student(teacher=Teacher(id=4, name=陈喝, sex=男, course=科目二, phone=3411314), id=15, name=好兄弟, sex=男, phone=1234132412, enterDate=2020-06-17, vip=0, tid=4, graduated=false), Student(teacher=Teacher(id=1, name=钟智杰, sex=男, course=科目二, phone=13241), id=17, name=34224, sex=男, phone=234234, enterDate=2020-06-20, vip=0, tid=1, graduated=false)], prePage=0, nextPage=2, isFirstPage=true, isLastPage=false, hasPreviousPage=false, hasNextPage=true, navigatePages=8, navigateFirstPage=1, navigateLastPage=2, navigatepageNums=[1, 2]}
+2020-06-22 08:57:41.345  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/students/2,method GET
+2020-06-22 08:57:41.345  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:57:41.346  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:57:41.347 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.d.S.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM student
+2020-06-22 08:57:41.348 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.d.S.selectByExample_COUNT          : ==> Parameters: 
+2020-06-22 08:57:41.348 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.d.S.selectByExample_COUNT          : <==      Total: 1
+2020-06-22 08:57:41.349 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.dao.StudentMapper.selectByExample  : ==>  Preparing: select id, NAME, sex, phone, enter_date, vip, tid, graduated from student LIMIT ?, ?
+2020-06-22 08:57:41.349 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.dao.StudentMapper.selectByExample  : ==> Parameters: 10(Integer), 10(Integer)
+2020-06-22 08:57:41.350 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 08:57:41.350 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 2(Integer)
+2020-06-22 08:57:41.351 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 08:57:41.352 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.dao.StudentMapper.selectByExample  : <==      Total: 1
+2020-06-22 08:57:41.352 TRACE 50300 --- [http-nio-80-exec-4] c.e.d.controller.TeacherController       : studentByExamplePageInfo{pageNum=2, pageSize=10, size=1, startRow=11, endRow=11, total=11, pages=2, list=Page{count=true, pageNum=2, pageSize=10, startRow=10, endRow=20, total=11, pages=2, reasonable=false, pageSizeZero=false}[Student(teacher=Teacher(id=2, name=智杰, sex=男, course=科目二, phone=1513412), id=18, name=312414, sex=男, phone=341214, enterDate=2020-06-20, vip=0, tid=2, graduated=false)], prePage=1, nextPage=0, isFirstPage=false, isLastPage=true, hasPreviousPage=true, hasNextPage=false, navigatePages=8, navigateFirstPage=1, navigateLastPage=2, navigatepageNums=[1, 2]}
+2020-06-22 08:57:43.442  INFO 50300 --- [http-nio-80-exec-5] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/exe,method GET
+2020-06-22 08:57:43.443  INFO 50300 --- [http-nio-80-exec-5] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:57:43.443  INFO 50300 --- [http-nio-80-exec-5] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:57:43.444 TRACE 50300 --- [http-nio-80-exec-5] c.e.d.controller.TeacherController       : 跳转练车管理页面
+2020-06-22 08:57:45.536  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/tcr/exeSelect,method GET
+2020-06-22 08:57:45.537  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : interceptor user User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:57:45.537  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : 正常访问User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:57:45.537 TRACE 50300 --- [http-nio-80-exec-6] c.e.d.controller.TeacherController       : User(username=emor, password=123456, fid=1, myrole=teacher)
+2020-06-22 08:57:45.545 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.ExerciseMapper.selectByExample   : ==>  Preparing: select id, tid, sid, exercise_date, exercise_length, present from exercise WHERE ( tid = ? and exercise_date like ? )
+2020-06-22 08:57:45.546 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.ExerciseMapper.selectByExample   : ==> Parameters: 1(Integer), %2020-06-22%(String)
+2020-06-22 08:57:45.549 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.d.ExerciseMapper.selectByExample   : <==      Total: 0
+2020-06-22 09:19:46.158  INFO 50300 --- [http-nio-80-exec-10] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/,method GET
+2020-06-22 09:19:55.779  INFO 50300 --- [http-nio-80-exec-1] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/register.html,method GET
+2020-06-22 09:19:59.257  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/doRegister,method POST
+2020-06-22 09:19:59.264 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user WHERE ( username = ? )
+2020-06-22 09:19:59.265 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.dao.UserMapper.countByExample      : ==> Parameters: emor6(String)
+2020-06-22 09:19:59.266 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.dao.UserMapper.countByExample      : <==      Total: 1
+2020-06-22 09:19:59.269 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.dao.UserMapper.insertSelective     : ==>  Preparing: insert into user ( username, password, myrole ) values ( ?, ?, ? )
+2020-06-22 09:19:59.342 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.dao.UserMapper.insertSelective     : ==> Parameters: emor6(String), 123456(String), student(String)
+2020-06-22 09:19:59.343 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.dao.UserMapper.insertSelective     : <==    Updates: 1
+2020-06-22 09:20:03.312  INFO 50300 --- [http-nio-80-exec-3] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/login,method POST
+2020-06-22 09:20:03.314 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.dao.UserMapper.selectByExample     : ==>  Preparing: select username, password, fid, myrole from user WHERE ( username = ? and password = ? )
+2020-06-22 09:20:03.315 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.dao.UserMapper.selectByExample     : ==> Parameters: emor6(String), 123456(String)
+2020-06-22 09:20:03.316 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-06-22 09:20:03.317 TRACE 50300 --- [http-nio-80-exec-3] c.e.dbfinal.controller.LoginController   : User(username=emor6, password=123456, fid=null, myrole=student)
+2020-06-22 09:20:03.327  INFO 50300 --- [http-nio-80-exec-5] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index,method GET
+2020-06-22 09:20:03.605  INFO 50300 --- [http-nio-80-exec-8] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/teachers,method GET
+2020-06-22 09:20:03.606 DEBUG 50300 --- [http-nio-80-exec-8] c.e.d.dao.TeacherMapper.selectByExample  : ==>  Preparing: select id, name, sex, course, phone from teacher
+2020-06-22 09:20:03.606 DEBUG 50300 --- [http-nio-80-exec-8] c.e.d.dao.TeacherMapper.selectByExample  : ==> Parameters: 
+2020-06-22 09:20:03.608 DEBUG 50300 --- [http-nio-80-exec-8] c.e.d.dao.TeacherMapper.selectByExample  : <==      Total: 5
+2020-06-22 09:22:09.436  INFO 50300 --- [Thread-25] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6d866dce: startup date [Mon Jun 22 08:43:21 CST 2020]; root of context hierarchy
+2020-06-22 09:22:09.438  INFO 50300 --- [Thread-25] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-06-22 09:22:09.439  INFO 50300 --- [Thread-25] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2020-06-22 09:22:09.450  INFO 50300 --- [Thread-25] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-06-22 09:22:10.527  INFO 50300 --- [restartedMain] com.emor.dbfinal.DbfinalApplication      : Starting DbfinalApplication on DESKTOP-CM8622B with PID 50300 (C:\Users\Emor\eclipse-workspace\dbfinal\target\classes started by Emor in C:\Users\Emor\eclipse-workspace\dbfinal)
+2020-06-22 09:22:10.527  INFO 50300 --- [restartedMain] com.emor.dbfinal.DbfinalApplication      : No active profile set, falling back to default profiles: default
+2020-06-22 09:22:10.530  INFO 50300 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a257e35: startup date [Mon Jun 22 09:22:10 CST 2020]; root of context hierarchy
+2020-06-22 09:22:11.037  INFO 50300 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-22 09:22:11.180  INFO 50300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$782ac5a4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-22 09:22:11.187  INFO 50300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$c13cfbc2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-22 09:22:11.195  INFO 50300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'springDaoMethodAspect' of type [com.emor.dbfinal.config.SpringDaoMethodAspect$$EnhancerBySpringCGLIB$$253ed647] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-22 09:22:11.200  INFO 50300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatInterceptor' of type [com.alibaba.druid.support.spring.stat.DruidStatInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-22 09:22:11.201  INFO 50300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatPointcut' of type [org.springframework.aop.support.JdkRegexpMethodPointcut] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-22 09:22:11.202  INFO 50300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-22 09:22:11.378  INFO 50300 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2020-06-22 09:22:11.379  INFO 50300 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-22 09:22:11.380  INFO 50300 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2020-06-22 09:22:11.412  INFO 50300 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-22 09:22:11.413  INFO 50300 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 883 ms
+2020-06-22 09:22:11.495  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-06-22 09:22:11.497  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2020-06-22 09:22:11.497  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-06-22 09:22:11.497  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-06-22 09:22:11.497  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-06-22 09:22:11.497  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-06-22 09:22:11.497  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2020-06-22 09:22:11.598  INFO 50300 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-22 09:22:12.961  INFO 50300 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-06-22 09:22:13.535  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a257e35: startup date [Mon Jun 22 09:22:10 CST 2020]; root of context hierarchy
+2020-06-22 09:22:13.548  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.emor.dbfinal.controller.CommonController.getUserInfo()
+2020-06-22 09:22:13.549  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.CommonController.toIndex(org.springframework.ui.Model)
+2020-06-22 09:22:13.549  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index/bind],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.CommonController.toBingPage()
+2020-06-22 09:22:13.549  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/{tid}/student],methods=[GET]}" onto public java.util.List<com.emor.dbfinal.entity.Student> com.emor.dbfinal.controller.CommonController.getTeachersStudent(java.lang.Integer)
+2020-06-22 09:22:13.549  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/student],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.CommonController.updateUserAndStu(com.emor.dbfinal.entity.Student,org.springframework.ui.Model)
+2020-06-22 09:22:13.549  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/teachers],methods=[GET]}" onto public java.util.List<com.emor.dbfinal.entity.Teacher> com.emor.dbfinal.controller.CommonController.getTeachers()
+2020-06-22 09:22:13.549  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/teacher],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.CommonController.updateUserAndTcr(com.emor.dbfinal.entity.Teacher,org.springframework.ui.Model)
+2020-06-22 09:22:13.550  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exam],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.ExaminationController.deployExam(org.springframework.ui.Model,java.lang.String,java.lang.Integer,java.lang.String)
+2020-06-22 09:22:13.550  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exam/{id}],methods=[DELETE]}" onto public java.lang.String com.emor.dbfinal.controller.ExaminationController.deleteExam(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:22:13.550  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exam],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.ExaminationController.toExamPage()
+2020-06-22 09:22:13.551  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exam/query],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.ExaminationController.checkExam(java.lang.String,org.springframework.ui.Model)
+2020-06-22 09:22:13.551  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exam/{id}],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.ExaminationController.toExamEdit(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:22:13.551  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exam],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.ExaminationController.examEdit(org.springframework.ui.Model,java.util.Map<java.lang.String, java.lang.String>)
+2020-06-22 09:22:13.552  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/students/{pageNum}],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.findStudentByInfo(com.emor.dbfinal.entity.Student,java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:22:13.552  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exeStudent/{id}],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.emor.dbfinal.controller.ExerciseController.exeStudent(java.lang.Integer)
+2020-06-22 09:22:13.552  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exeDeploy],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.exeDeploy(org.springframework.ui.Model)
+2020-06-22 09:22:13.552  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exe],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.toExe()
+2020-06-22 09:22:13.552  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exeEdit/{id}],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.exeEdit(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:22:13.552  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exeEdit],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.updateExe(org.springframework.ui.Model)
+2020-06-22 09:22:13.552  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exe/{id}],methods=[DELETE]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.deleteExe(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:22:13.553  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exeSelect],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.exeSelect(java.lang.String,org.springframework.ui.Model)
+2020-06-22 09:22:13.553  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.emor.dbfinal.controller.HelloController.hello()
+2020-06-22 09:22:13.553  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.LoginController.login()
+2020-06-22 09:22:13.555  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.LoginController.doLogin(com.emor.dbfinal.entity.User,org.springframework.ui.Model)
+2020-06-22 09:22:13.555  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/setting],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.RegisterController.settingStudentInfo(com.emor.dbfinal.entity.Student,java.lang.Integer)
+2020-06-22 09:22:13.555  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/doRegister],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.RegisterController.doRegister(com.emor.dbfinal.entity.User,org.springframework.ui.Model)
+2020-06-22 09:22:13.556  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stud/exam],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.StudentController.toExamPage()
+2020-06-22 09:22:13.556  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stud/reserve],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.StudentController.findExe(java.lang.String,org.springframework.ui.Model)
+2020-06-22 09:22:13.556  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stud/exe],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.StudentController.toReservePage()
+2020-06-22 09:22:13.556  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stud/exam/reserve/{id}],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.StudentController.reserveExam(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:22:13.557  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stud/exams],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.StudentController.findExam(java.lang.String,org.springframework.ui.Model)
+2020-06-22 09:22:13.557  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stud/reserve/{id}],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.StudentController.reserveExe(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:22:13.561  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/admin/student],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.updateStudentForAdmin(com.emor.dbfinal.entity.Student,org.springframework.ui.Model)
+2020-06-22 09:22:13.562  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/students/queries],methods=[GET]}" onto public java.util.HashMap<java.lang.String, com.emor.dbfinal.conponent.strategy.student.StudentQueryStrategy> com.emor.dbfinal.controller.TeacherController.getQueries()
+2020-06-22 09:22:13.562  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/student],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.updateStudent(com.emor.dbfinal.entity.Student,org.springframework.ui.Model)
+2020-06-22 09:22:13.562  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/student],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.toAddPage()
+2020-06-22 09:22:13.562  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/student/{id}],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.toEditPage(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:22:13.562  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/students/query],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.superQuery(java.lang.String,java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:22:13.562  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/student/{id}],methods=[DELETE]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.deleteStudent(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:22:13.563  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/admin/student],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.toAdminEditPage()
+2020-06-22 09:22:13.563  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/admin/student/{id}],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.toAdminEditPage(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:22:13.563  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/admin_list],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.toAdminPage()
+2020-06-22 09:22:13.563  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/teacher],methods=[GET]}" onto public com.emor.dbfinal.entity.Teacher com.emor.dbfinal.controller.TeacherController.getTeacherInfo()
+2020-06-22 09:22:13.563  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/student],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.addStudent(com.emor.dbfinal.entity.Student)
+2020-06-22 09:22:13.565  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-06-22 09:22:13.565  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-06-22 09:22:13.573  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 09:22:13.573  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/login] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 09:22:13.573  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/login.html] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 09:22:13.573  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/register.html] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 09:22:13.573  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/register] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 09:22:13.573  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/index] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 09:22:13.573  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/index.html] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 09:22:13.579  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-22 09:22:13.579  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-22 09:22:13.593  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-22 09:22:13.611  WARN 50300 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-06-22 09:22:13.788  INFO 50300 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-22 09:22:13.860  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-06-22 09:22:13.860  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2020-06-22 09:22:13.861  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'slf4jLogFilter' has been autodetected for JMX exposure
+2020-06-22 09:22:13.861  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'wallConfig' has been autodetected for JMX exposure
+2020-06-22 09:22:13.861  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'wallFilter' has been autodetected for JMX exposure
+2020-06-22 09:22:13.861  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2020-06-22 09:22:13.864  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'slf4jLogFilter': registering with JMX server as MBean [com.alibaba.druid.filter.logging:name=slf4jLogFilter,type=Slf4jLogFilter]
+2020-06-22 09:22:13.866  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'wallConfig': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallConfig,type=WallConfig]
+2020-06-22 09:22:13.866  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'wallFilter': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallFilter,type=WallFilter]
+2020-06-22 09:22:13.867  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2020-06-22 09:22:13.868  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2020-06-22 09:22:13.878  INFO 50300 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 80 (http)
+2020-06-22 09:22:13.881  INFO 50300 --- [restartedMain] com.emor.dbfinal.DbfinalApplication      : Started DbfinalApplication in 3.419 seconds (JVM running for 2341.458)
+2020-06-22 09:23:20.827  INFO 50300 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-06-22 09:23:20.827  INFO 50300 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-06-22 09:23:20.831  INFO 50300 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 4 ms
+2020-06-22 09:23:20.831  INFO 50300 --- [http-nio-80-exec-1] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index,method GET
+2020-06-22 09:23:21.432  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/teachers,method GET
+2020-06-22 09:23:21.498 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.dao.TeacherMapper.selectByExample  : ==>  Preparing: select id, name, sex, course, phone from teacher
+2020-06-22 09:23:21.499 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.dao.TeacherMapper.selectByExample  : ==> Parameters: 
+2020-06-22 09:23:21.501 DEBUG 50300 --- [http-nio-80-exec-4] c.e.d.dao.TeacherMapper.selectByExample  : <==      Total: 5
+2020-06-22 09:23:28.741  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index/bind,method GET
+2020-06-22 09:24:55.078  INFO 50300 --- [http-nio-80-exec-10] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index/bind,method GET
+2020-06-22 09:25:11.039  INFO 50300 --- [http-nio-80-exec-4] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index/bind,method GET
+2020-06-22 09:25:28.766  INFO 50300 --- [http-nio-80-exec-7] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index,method GET
+2020-06-22 09:25:29.212  INFO 50300 --- [http-nio-80-exec-1] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/teachers,method GET
+2020-06-22 09:25:29.218 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.dao.TeacherMapper.selectByExample  : ==>  Preparing: select id, name, sex, course, phone from teacher
+2020-06-22 09:25:29.219 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.dao.TeacherMapper.selectByExample  : ==> Parameters: 
+2020-06-22 09:25:29.263 DEBUG 50300 --- [http-nio-80-exec-1] c.e.d.dao.TeacherMapper.selectByExample  : <==      Total: 5
+2020-06-22 09:25:31.860  INFO 50300 --- [http-nio-80-exec-2] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index/bind,method GET
+2020-06-22 09:32:42.848  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index/bind,method GET
+2020-06-22 09:33:25.982  INFO 50300 --- [http-nio-80-exec-9] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index/bind,method GET
+2020-06-22 09:34:13.468  INFO 50300 --- [http-nio-80-exec-2] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index/bind,method GET
+2020-06-22 09:34:35.065  INFO 50300 --- [http-nio-80-exec-5] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index/bind,method GET
+2020-06-22 09:34:47.698  INFO 50300 --- [http-nio-80-exec-7] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index/bind,method GET
+2020-06-22 09:34:57.546  INFO 50300 --- [http-nio-80-exec-10] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index,method GET
+2020-06-22 09:34:57.979  INFO 50300 --- [http-nio-80-exec-3] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/teachers,method GET
+2020-06-22 09:34:57.984 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.dao.TeacherMapper.selectByExample  : ==>  Preparing: select id, name, sex, course, phone from teacher
+2020-06-22 09:34:57.984 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.dao.TeacherMapper.selectByExample  : ==> Parameters: 
+2020-06-22 09:34:57.985 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.dao.TeacherMapper.selectByExample  : <==      Total: 5
+2020-06-22 09:39:10.959  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index/bind,method GET
+2020-06-22 09:39:43.153  INFO 50300 --- [http-nio-80-exec-7] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index/bind,method GET
+2020-06-22 09:51:10.368  INFO 50300 --- [Thread-33] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@a257e35: startup date [Mon Jun 22 09:22:10 CST 2020]; root of context hierarchy
+2020-06-22 09:51:10.372  INFO 50300 --- [Thread-33] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-06-22 09:51:10.372  INFO 50300 --- [Thread-33] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2020-06-22 09:51:10.375  INFO 50300 --- [Thread-33] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2020-06-22 09:51:12.669  INFO 50300 --- [restartedMain] com.emor.dbfinal.DbfinalApplication      : Starting DbfinalApplication on DESKTOP-CM8622B with PID 50300 (C:\Users\Emor\eclipse-workspace\dbfinal\target\classes started by Emor in C:\Users\Emor\eclipse-workspace\dbfinal)
+2020-06-22 09:51:12.670  INFO 50300 --- [restartedMain] com.emor.dbfinal.DbfinalApplication      : No active profile set, falling back to default profiles: default
+2020-06-22 09:51:12.677  INFO 50300 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@299fc77a: startup date [Mon Jun 22 09:51:12 CST 2020]; root of context hierarchy
+2020-06-22 09:51:13.320  INFO 50300 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-22 09:51:13.458  INFO 50300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$782ac5a4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-22 09:51:13.463  INFO 50300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$c13cfbc2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-22 09:51:13.470  INFO 50300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'springDaoMethodAspect' of type [com.emor.dbfinal.config.SpringDaoMethodAspect$$EnhancerBySpringCGLIB$$253ed647] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-22 09:51:13.474  INFO 50300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatInterceptor' of type [com.alibaba.druid.support.spring.stat.DruidStatInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-22 09:51:13.476  INFO 50300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatPointcut' of type [org.springframework.aop.support.JdkRegexpMethodPointcut] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-22 09:51:13.477  INFO 50300 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'druidStatAdvisor' of type [org.springframework.aop.support.DefaultPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-22 09:51:13.648  INFO 50300 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 80 (http)
+2020-06-22 09:51:13.649  INFO 50300 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-22 09:51:13.649  INFO 50300 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2020-06-22 09:51:13.706  INFO 50300 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-22 09:51:13.709  INFO 50300 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1032 ms
+2020-06-22 09:51:13.790  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-06-22 09:51:13.790  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2020-06-22 09:51:13.791  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-06-22 09:51:13.791  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-06-22 09:51:13.791  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-06-22 09:51:13.791  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-06-22 09:51:13.791  INFO 50300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2020-06-22 09:51:13.867  INFO 50300 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-22 09:51:15.135  INFO 50300 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} inited
+2020-06-22 09:51:15.974  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@299fc77a: startup date [Mon Jun 22 09:51:12 CST 2020]; root of context hierarchy
+2020-06-22 09:51:15.986  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.emor.dbfinal.controller.CommonController.getUserInfo()
+2020-06-22 09:51:15.987  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.CommonController.toIndex(org.springframework.ui.Model)
+2020-06-22 09:51:15.987  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index/bind],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.CommonController.toBingPage()
+2020-06-22 09:51:15.987  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/{tid}/student],methods=[GET]}" onto public java.util.List<com.emor.dbfinal.entity.Student> com.emor.dbfinal.controller.CommonController.getTeachersStudent(java.lang.Integer)
+2020-06-22 09:51:15.987  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/student],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.CommonController.updateUserAndStu(com.emor.dbfinal.entity.Student,org.springframework.ui.Model)
+2020-06-22 09:51:15.987  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/teachers],methods=[GET]}" onto public java.util.List<com.emor.dbfinal.entity.Teacher> com.emor.dbfinal.controller.CommonController.getTeachers()
+2020-06-22 09:51:15.988  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/teacher],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.CommonController.updateUserAndTcr(com.emor.dbfinal.entity.Teacher,org.springframework.ui.Model)
+2020-06-22 09:51:15.988  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exam],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.ExaminationController.deployExam(org.springframework.ui.Model,java.lang.String,java.lang.Integer,java.lang.String)
+2020-06-22 09:51:15.988  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exam/{id}],methods=[DELETE]}" onto public java.lang.String com.emor.dbfinal.controller.ExaminationController.deleteExam(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:51:15.989  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exam],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.ExaminationController.toExamPage()
+2020-06-22 09:51:15.989  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exam/query],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.ExaminationController.checkExam(java.lang.String,org.springframework.ui.Model)
+2020-06-22 09:51:15.989  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exam/{id}],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.ExaminationController.toExamEdit(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:51:15.989  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exam],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.ExaminationController.examEdit(org.springframework.ui.Model,java.util.Map<java.lang.String, java.lang.String>)
+2020-06-22 09:51:15.990  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/students/{pageNum}],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.findStudentByInfo(com.emor.dbfinal.entity.Student,java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:51:15.990  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exeStudent/{id}],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.emor.dbfinal.controller.ExerciseController.exeStudent(java.lang.Integer)
+2020-06-22 09:51:15.990  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exeDeploy],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.exeDeploy(org.springframework.ui.Model)
+2020-06-22 09:51:15.990  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exe],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.toExe()
+2020-06-22 09:51:15.990  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exeEdit/{id}],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.exeEdit(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:51:15.990  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exeEdit],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.updateExe(org.springframework.ui.Model)
+2020-06-22 09:51:15.991  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exe/{id}],methods=[DELETE]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.deleteExe(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:51:15.991  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/exeSelect],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.ExerciseController.exeSelect(java.lang.String,org.springframework.ui.Model)
+2020-06-22 09:51:15.991  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello]}" onto public java.lang.String com.emor.dbfinal.controller.HelloController.hello()
+2020-06-22 09:51:15.991  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.LoginController.login()
+2020-06-22 09:51:15.992  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.LoginController.doLogin(com.emor.dbfinal.entity.User,org.springframework.ui.Model)
+2020-06-22 09:51:15.992  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/setting],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.RegisterController.settingStudentInfo(com.emor.dbfinal.entity.Student,java.lang.Integer)
+2020-06-22 09:51:15.993  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/doRegister],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.RegisterController.doRegister(com.emor.dbfinal.entity.User,org.springframework.ui.Model)
+2020-06-22 09:51:15.994  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index/noBindings],methods=[GET]}" onto public java.util.List<com.emor.dbfinal.entity.Student> com.emor.dbfinal.controller.StudentController.getNoBinddings()
+2020-06-22 09:51:15.994  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stud/exam],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.StudentController.toExamPage()
+2020-06-22 09:51:15.995  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stud/reserve],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.StudentController.findExe(java.lang.String,org.springframework.ui.Model)
+2020-06-22 09:51:15.995  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stud/exe],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.StudentController.toReservePage()
+2020-06-22 09:51:15.995  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stud/exam/reserve/{id}],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.StudentController.reserveExam(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:51:15.995  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stud/exams],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.StudentController.findExam(java.lang.String,org.springframework.ui.Model)
+2020-06-22 09:51:15.995  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stud/reserve/{id}],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.StudentController.reserveExe(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:51:15.997  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/admin/student],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.updateStudentForAdmin(com.emor.dbfinal.entity.Student,org.springframework.ui.Model)
+2020-06-22 09:51:15.997  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/students/queries],methods=[GET]}" onto public java.util.HashMap<java.lang.String, com.emor.dbfinal.conponent.strategy.student.StudentQueryStrategy> com.emor.dbfinal.controller.TeacherController.getQueries()
+2020-06-22 09:51:15.997  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/student],methods=[PUT]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.updateStudent(com.emor.dbfinal.entity.Student,org.springframework.ui.Model)
+2020-06-22 09:51:15.997  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/student],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.toAddPage()
+2020-06-22 09:51:15.997  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/student/{id}],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.toEditPage(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:51:15.997  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/students/query],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.superQuery(java.lang.String,java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:51:15.998  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/student/{id}],methods=[DELETE]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.deleteStudent(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:51:15.998  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/admin/student],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.toAdminEditPage()
+2020-06-22 09:51:15.998  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/admin/student/{id}],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.toAdminEditPage(java.lang.Integer,org.springframework.ui.Model)
+2020-06-22 09:51:15.998  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/admin_list],methods=[GET]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.toAdminPage()
+2020-06-22 09:51:15.998  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/teacher],methods=[GET]}" onto public com.emor.dbfinal.entity.Teacher com.emor.dbfinal.controller.TeacherController.getTeacherInfo()
+2020-06-22 09:51:15.998  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tcr/student],methods=[POST]}" onto public java.lang.String com.emor.dbfinal.controller.TeacherController.addStudent(com.emor.dbfinal.entity.Student)
+2020-06-22 09:51:16.000  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-06-22 09:51:16.000  INFO 50300 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-06-22 09:51:16.007  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 09:51:16.007  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/login] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 09:51:16.007  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/login.html] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 09:51:16.007  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/register.html] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 09:51:16.007  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/register] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 09:51:16.007  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/index] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 09:51:16.007  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/index.html] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2020-06-22 09:51:16.014  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-22 09:51:16.014  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-22 09:51:16.031  INFO 50300 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-22 09:51:16.050  WARN 50300 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-06-22 09:51:16.241  INFO 50300 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-22 09:51:16.314  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-06-22 09:51:16.314  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2020-06-22 09:51:16.315  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'slf4jLogFilter' has been autodetected for JMX exposure
+2020-06-22 09:51:16.315  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'wallConfig' has been autodetected for JMX exposure
+2020-06-22 09:51:16.315  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'wallFilter' has been autodetected for JMX exposure
+2020-06-22 09:51:16.315  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2020-06-22 09:51:16.318  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'slf4jLogFilter': registering with JMX server as MBean [com.alibaba.druid.filter.logging:name=slf4jLogFilter,type=Slf4jLogFilter]
+2020-06-22 09:51:16.319  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'wallConfig': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallConfig,type=WallConfig]
+2020-06-22 09:51:16.320  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'wallFilter': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallFilter,type=WallFilter]
+2020-06-22 09:51:16.320  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2020-06-22 09:51:16.321  INFO 50300 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2020-06-22 09:51:16.336  INFO 50300 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 80 (http)
+2020-06-22 09:51:16.338  INFO 50300 --- [restartedMain] com.emor.dbfinal.DbfinalApplication      : Started DbfinalApplication in 3.771 seconds (JVM running for 4083.916)
+2020-06-22 09:51:16.400  INFO 50300 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-06-22 09:51:16.400  INFO 50300 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-06-22 09:51:16.404  INFO 50300 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 4 ms
+2020-06-22 09:51:16.405  INFO 50300 --- [http-nio-80-exec-1] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index/bind,method GET
+2020-06-22 09:51:16.979  INFO 50300 --- [http-nio-80-exec-3] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index/noBindings,method GET
+2020-06-22 09:51:17.052 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.S.findNonBindingStudents         : ==>  Preparing: SELECT id, NAME, sex, phone, enter_date, vip, tid, graduated FROM student WHERE NOT EXISTS ( SELECT * FROM USER WHERE fid IS NOT NULL AND user.`fid`=student.`id` )
+2020-06-22 09:51:17.056 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.S.findNonBindingStudents         : ==> Parameters: 
+2020-06-22 09:51:17.060 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 09:51:17.061 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 3(Integer)
+2020-06-22 09:51:17.062 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 09:51:17.063 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 09:51:17.063 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 4(Integer)
+2020-06-22 09:51:17.064 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 09:51:17.065 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 09:51:17.065 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 2(Integer)
+2020-06-22 09:51:17.066 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 09:51:17.067 DEBUG 50300 --- [http-nio-80-exec-3] c.e.d.d.S.findNonBindingStudents         : <==      Total: 7
+2020-06-22 09:55:13.160  INFO 50300 --- [http-nio-80-exec-8] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index/bind,method GET
+2020-06-22 09:55:13.859  INFO 50300 --- [http-nio-80-exec-10] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index/noBindings,method GET
+2020-06-22 09:55:13.863 DEBUG 50300 --- [http-nio-80-exec-10] c.e.d.d.S.findNonBindingStudents         : ==>  Preparing: SELECT id, NAME, sex, phone, enter_date, vip, tid, graduated FROM student WHERE NOT EXISTS ( SELECT * FROM USER WHERE fid IS NOT NULL AND user.`fid`=student.`id` )
+2020-06-22 09:55:13.864 DEBUG 50300 --- [http-nio-80-exec-10] c.e.d.d.S.findNonBindingStudents         : ==> Parameters: 
+2020-06-22 09:55:13.865 DEBUG 50300 --- [http-nio-80-exec-10] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 09:55:13.865 DEBUG 50300 --- [http-nio-80-exec-10] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 3(Integer)
+2020-06-22 09:55:13.866 DEBUG 50300 --- [http-nio-80-exec-10] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 09:55:13.867 DEBUG 50300 --- [http-nio-80-exec-10] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 09:55:13.868 DEBUG 50300 --- [http-nio-80-exec-10] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 4(Integer)
+2020-06-22 09:55:13.868 DEBUG 50300 --- [http-nio-80-exec-10] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 09:55:13.869 DEBUG 50300 --- [http-nio-80-exec-10] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 09:55:13.869 DEBUG 50300 --- [http-nio-80-exec-10] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 2(Integer)
+2020-06-22 09:55:13.870 DEBUG 50300 --- [http-nio-80-exec-10] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 09:55:13.870 DEBUG 50300 --- [http-nio-80-exec-10] c.e.d.d.S.findNonBindingStudents         : <==      Total: 7
+2020-06-22 09:55:25.920  INFO 50300 --- [http-nio-80-exec-3] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index,method GET
+2020-06-22 09:55:26.502  INFO 50300 --- [http-nio-80-exec-6] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/teachers,method GET
+2020-06-22 09:55:26.503 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.dao.TeacherMapper.selectByExample  : ==>  Preparing: select id, name, sex, course, phone from teacher
+2020-06-22 09:55:26.504 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.dao.TeacherMapper.selectByExample  : ==> Parameters: 
+2020-06-22 09:55:26.505 DEBUG 50300 --- [http-nio-80-exec-6] c.e.d.dao.TeacherMapper.selectByExample  : <==      Total: 5
+2020-06-22 09:55:27.788  INFO 50300 --- [http-nio-80-exec-7] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index/bind,method GET
+2020-06-22 09:55:28.145  INFO 50300 --- [http-nio-80-exec-9] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index/noBindings,method GET
+2020-06-22 09:55:28.145 DEBUG 50300 --- [http-nio-80-exec-9] c.e.d.d.S.findNonBindingStudents         : ==>  Preparing: SELECT id, NAME, sex, phone, enter_date, vip, tid, graduated FROM student WHERE NOT EXISTS ( SELECT * FROM USER WHERE fid IS NOT NULL AND user.`fid`=student.`id` )
+2020-06-22 09:55:28.146 DEBUG 50300 --- [http-nio-80-exec-9] c.e.d.d.S.findNonBindingStudents         : ==> Parameters: 
+2020-06-22 09:55:28.150 DEBUG 50300 --- [http-nio-80-exec-9] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 09:55:28.150 DEBUG 50300 --- [http-nio-80-exec-9] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 3(Integer)
+2020-06-22 09:55:28.151 DEBUG 50300 --- [http-nio-80-exec-9] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 09:55:28.153 DEBUG 50300 --- [http-nio-80-exec-9] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 09:55:28.153 DEBUG 50300 --- [http-nio-80-exec-9] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 4(Integer)
+2020-06-22 09:55:28.161 DEBUG 50300 --- [http-nio-80-exec-9] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 09:55:28.162 DEBUG 50300 --- [http-nio-80-exec-9] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 09:55:28.163 DEBUG 50300 --- [http-nio-80-exec-9] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 2(Integer)
+2020-06-22 09:55:28.164 DEBUG 50300 --- [http-nio-80-exec-9] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 09:55:28.164 DEBUG 50300 --- [http-nio-80-exec-9] c.e.d.d.S.findNonBindingStudents         : <==      Total: 7
+2020-06-22 09:56:47.022  INFO 50300 --- [http-nio-80-exec-2] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index/bind,method GET
+2020-06-22 09:56:47.785  INFO 50300 --- [http-nio-80-exec-5] c.e.dbfinal.conponent.LoginInterceptor   : 请求的URI/index/noBindings,method GET
+2020-06-22 09:56:47.789 DEBUG 50300 --- [http-nio-80-exec-5] c.e.d.d.S.findNonBindingStudents         : ==>  Preparing: SELECT id, NAME, sex, phone, enter_date, vip, tid, graduated FROM student WHERE NOT EXISTS ( SELECT * FROM USER WHERE fid IS NOT NULL AND user.`fid`=student.`id` )
+2020-06-22 09:56:47.790 DEBUG 50300 --- [http-nio-80-exec-5] c.e.d.d.S.findNonBindingStudents         : ==> Parameters: 
+2020-06-22 09:56:47.791 DEBUG 50300 --- [http-nio-80-exec-5] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 09:56:47.792 DEBUG 50300 --- [http-nio-80-exec-5] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 3(Integer)
+2020-06-22 09:56:47.793 DEBUG 50300 --- [http-nio-80-exec-5] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 09:56:47.793 DEBUG 50300 --- [http-nio-80-exec-5] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 09:56:47.794 DEBUG 50300 --- [http-nio-80-exec-5] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 4(Integer)
+2020-06-22 09:56:47.797 DEBUG 50300 --- [http-nio-80-exec-5] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 09:56:47.797 DEBUG 50300 --- [http-nio-80-exec-5] c.e.d.d.T.selectByPrimaryKey             : ====>  Preparing: select id, name, sex, course, phone from teacher where id = ?
+2020-06-22 09:56:47.798 DEBUG 50300 --- [http-nio-80-exec-5] c.e.d.d.T.selectByPrimaryKey             : ====> Parameters: 2(Integer)
+2020-06-22 09:56:47.799 DEBUG 50300 --- [http-nio-80-exec-5] c.e.d.d.T.selectByPrimaryKey             : <====      Total: 1
+2020-06-22 09:56:47.801 DEBUG 50300 --- [http-nio-80-exec-5] c.e.d.d.S.findNonBindingStudents         : <==      Total: 7

@@ -98,6 +98,11 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
+    public List<Student> findNonBinding() {
+        return studentMapper.findNonBindingStudents();
+    }
+
+    @Override
     @Transactional
     public int reserveExercise(User user, Integer id) throws ExerciseException{
         initExe();

@@ -25,4 +25,5 @@ public interface StudentService {
 
     PageInfo<Student> findNonGraduated(Integer pageNum);
     PageInfo<Student> findNonBinding(Integer pageNum);
+    List<Student> findNonBinding();
 }
