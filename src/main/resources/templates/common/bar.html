@@ -20,7 +20,8 @@
 		  <ul class="navbar-nav px-3">
 		    <li class="nav-item text-nowrap">
               <form th:action="@{/logout}" method="post">
-		      <a class="nav-link" type="sumbit">Sign out</a>
+                <input type="hidden" name="_method" th:value="delete">
+		        <a class="nav-link" type="submit">Sign out</a>
               </form>
 		    </li>
 		  </ul>
