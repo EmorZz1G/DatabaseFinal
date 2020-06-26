@@ -86,7 +86,7 @@ public class TeacherController {
     @PutMapping(TEACHER_PREFIX +"/student")
     public String updateStudent(Student student,Model model){
         commonUpdateStudent(student, model);
-        return "redirect:"+TEACHER_PREFIX+"/students";
+        return "redirect:"+ TEACHER_PREFIX +"/students/1";
     }
 
     private void commonUpdateStudent(Student student, Model model) {
@@ -96,9 +96,14 @@ public class TeacherController {
         logger.trace("修改成功");
     }
 
-    @PutMapping(TEACHER_PREFIX +"/admin/student")
+    @PostMapping(TEACHER_PREFIX +"/admin/student")
     public String updateStudentForAdmin(Student student,Model model){
-        commonUpdateStudent(student, model);
+        teacherService.addStudent(student);
+        return "stu/admin_list";
+    }
+    @PutMapping(TEACHER_PREFIX +"/admin/student")
+    public String updateStudentForAdmin2(Student student,Model model){
+        commonUpdateStudent(student,model);
         return "stu/admin_list";
     }
     @DeleteMapping(TEACHER_PREFIX +"/student/{id}")
@@ -106,7 +111,6 @@ public class TeacherController {
         logger.trace("id "+id+" 的学生 准备删除");
         teacherService.deleteStudent(id);
         logger.trace("删除成功");
-
         return "redirect:"+ TEACHER_PREFIX +"/students/1";
     }
     //@GetMapping(TEACHER_PREFIX +"/students/{pageNum}")
